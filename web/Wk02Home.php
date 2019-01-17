@@ -13,6 +13,11 @@
   </head>
 
   <header>
+    <!--Heading-->
+    <div id="heading">
+      <?php include 'Wk02Header.php';?>
+    </div>
+
     <!--I would like a menu along the top-->
     <div class="topMenu">
     <?php include 'Wk02TopMenu.php'; ?>

@@ -12,3 +12,8 @@ imgProfile {
   height:100px;
   width: auto;
 }
+
+heading {
+  font-size: 3em;
+  syle: bold;
+}
