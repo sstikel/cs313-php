@@ -1,3 +1,14 @@
 body {
   background-color: lightgrey;
+  font-size: 1em;
+}
+
+imgProfile {
+  height:100px;
+  width: auto;
+}
+
+.dImages {
+  height:100px;
+  width: auto;
 }
