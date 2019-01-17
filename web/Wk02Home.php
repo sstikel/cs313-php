@@ -15,7 +15,7 @@
   <header>
     <!--I would like a menu along the top-->
     <div class="topMenu">
-    <!--  <?php include 'Wk02TopMenu.php'; ?>-->
+    <!-- include 'Wk02TopMenu.php'; --><!--Add php tags-->
     </div>
   </header>
   <hr>
