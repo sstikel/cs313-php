@@ -33,11 +33,3 @@ heading {
   color: white;
 }
 
-.flexing {
-  display: flex;
-}
-
-.flexing > div {
-  width: 100px
-  margin: 8px;  
-}
