@@ -37,7 +37,7 @@
       Goals: Find a software job, get paid, have kids, take kids hiking.<br>
     </p>
     </div>
-    <div id="dImages">
+    <div class="dImages">
       <table>
         <tr><td><img id="imgSamLiz" src="SamLiz.jpg" alt="Sam and Liz">My wife and I shortly before we were married.</td></tr>
         <tr><td><img id="imgHiking" src="Hiking.jpg" alt="Hiking">One of my favorite trails in AZ with my brothers and a friend.</td></tr>
