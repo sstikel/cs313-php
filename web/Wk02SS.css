@@ -38,8 +38,6 @@ heading {
 }
 
 .flexing > div {
-  width: 200px;
-  margin: 8px;
-  text-align: center;
-  
+  width: 100px
+  margin: 8px;  
 }
