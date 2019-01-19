@@ -39,9 +39,9 @@
     </div>
     <div id="dImages">
       <table>
-        <tr><td><img src="SamLiz.jpg" alt="Sam and Liz">My wife and I shortly before we were married.</td></tr>
-        <tr><td><img src="Hiking.jpg" alt="Hiking">One of my favorite trails in AZ with my brothers and a friend.</td></tr>
-        <tr><td><img src="Ballet.jpg" alt="Ballet">From the many years I danced ballet, this is one of my proudest moments.</td></tr>
+        <tr><td><img id="imgSamLiz" src="SamLiz.jpg" alt="Sam and Liz">My wife and I shortly before we were married.</td></tr>
+        <tr><td><img id="imgHiking" src="Hiking.jpg" alt="Hiking">One of my favorite trails in AZ with my brothers and a friend.</td></tr>
+        <tr><td><img id="imgBallet" src="Ballet.jpg" alt="Ballet">From the many years I danced ballet, this is one of my proudest moments.</td></tr>
       </table>
     </div>
   </body>
