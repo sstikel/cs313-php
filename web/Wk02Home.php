@@ -14,18 +14,21 @@
 
   <header>
     <!--Heading-->
-    <div id="heading">
+    <div class="flexing">
+    
       <?php include 'Wk02Header.php';?>
-    </div>
+    
 
     <!--I would like a menu along the top-->
-    <div class="topMenu">
+<!--    <div class="topMenu"> -->
     <?php include 'Wk02TopMenu.php'; ?>
+    <!--/div-->
     </div>
   </header>
   <hr>
 
   <body>
+    <div class="flexing">
     <!--TODO Add image (or more)-->
     <img id="imgProfile" src="BlueShirt.png" alt="Sam Gay">
     <p id="bio">
@@ -35,11 +38,13 @@
       Interests:Sam loves most anything in the outdoors; whether it be hiking, backpacking, shooting, camping, water skiing, etc.<br>
       Goals: Find a software job, get paid, have kids, take kids hiking.<br>
     </p>
+    </div>
     <div id="dImages">
       <table>
-        <tr><td><img src="SamLiz.jpg" alt="Sam and Liz"></td><td>My wife and I shortly before we were married.</td></tr>
-        <tr><td><img src="Hiking.jpg" alt="Hiking"></td><td>One of my favorite trails in AZ with my brothers and a friend.</td></tr>
-        <tr><td><img src="Ballet.jpg" alt="Ballet"></td><td>From the many years I danced ballet, this is one of my proudest moments.</td></tr>
+        <div class="flexing">
+        <div><tr><td><img src="SamLiz.jpg" alt="Sam and Liz"></td><td>My wife and I shortly before we were married.</td></tr></div>
+        <div><tr><td><img src="Hiking.jpg" alt="Hiking"></td><td>One of my favorite trails in AZ with my brothers and a friend.</td></tr></div>
+        <div><tr><td><img src="Ballet.jpg" alt="Ballet"></td><td>From the many years I danced ballet, this is one of my proudest moments.</td></tr></div>
       </table>
     </div>
   </body>
