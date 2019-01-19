@@ -9,7 +9,7 @@ imgProfile {
 }
 
 .dImages, imgSamLiz, imgHiking, imgBallet {
-  height: 50%
+  height: 50%;
   width: auto;
 }
 
