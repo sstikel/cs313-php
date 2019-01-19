@@ -46,12 +46,13 @@
       </table>
     </div>
   </body>
-
+  <br>
+  <button onclick="benignFunction()">No Touch</button>
   <hr>
   <footer>
   <a href="https://www.linkedin.com/in/samuel-gay-69522490/">LinkedIn</a>, <a href="https://github.com/sstikel">GitHub</a>
   <br>
-  <button onclick="benignFunction()">No Touch</button>
+  
   </footer>
 </div>  
 
