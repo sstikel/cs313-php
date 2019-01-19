@@ -8,7 +8,7 @@ imgProfile {
   width: 100px;
 }
 
-.dImages {
+.dImages, imgSamLiz, imgHiking, imgBallet {
   height: 50%
   width: auto;
 }
