@@ -35,9 +35,11 @@
         <tr><td><img id="imgBallet" src="Ballet.jpg" alt="Ballet">From the many years I danced ballet, this is one of my proudest moments.</td></tr>
       </table>
     </div>
+    <br>
+    <button onclick="benignFunction()">No Touch</button>
+
   </body>
-  <br>
-  <button onclick="benignFunction()">No Touch</button>
+
   <hr>
   <footer>
   <a href="https://www.linkedin.com/in/samuel-gay-69522490/">LinkedIn</a>, <a href="https://github.com/sstikel">GitHub</a>
