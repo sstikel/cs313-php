@@ -17,3 +17,19 @@ heading {
   font-size: 3em;
   syle: bold;
 }
+
+.topMenu {
+  overflow: hidden;
+  background-color: steelblue;
+}
+
+.topMenu a {
+  float: left;
+  text-align: center;
+}
+
+.topMenu a:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
