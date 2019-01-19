@@ -4,13 +4,13 @@ body {
 }
 
 imgProfile {
-  height:100px;
-  width: auto;
+  height: auto;
+  width: 100px;
 }
 
 .dImages {
-  height:100px;
-  width: auto;
+  height: auto;
+  width: 100px;
 }
 
 heading {
