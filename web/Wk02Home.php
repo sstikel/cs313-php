@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Home-SamG-CS313</title>
-    
+<div id="entire">    
+
     <!--TODO External Stylesheet-->
     <!--TODO Include colors, images, personality, creativity (keep professional)-->
     <link rel="stylesheet" type="text/css" href="Wk02SS.css"><!--TODO Alter so it works on Heroku-->
@@ -49,8 +50,11 @@
   <hr>
   <footer>
   <a href="https://www.linkedin.com/in/samuel-gay-69522490/">LinkedIn</a>, <a href="https://github.com/sstikel">GitHub</a>
+  <br>
+  <button onclick="benignFunction()">No Touch</button>
   </footer>
-  
+</div>  
+
 </html>
 
 
