@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <header>
-  <?php include "header.php"?>
+  <?php //include "header.php"?>
 </header>
 <body>
     Beginning of my browse page
