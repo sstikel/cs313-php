@@ -13,7 +13,7 @@
     <script src="javascript.js"></script>
 </head>
 <header>
-  <?php require "header.php" ?>
+  <?php //require "header.php" ?>
 </header>
 <body>
   
@@ -36,11 +36,11 @@
     ///////////total/////////////////////
     echo "Your total: $" . $total . "<br><br>";
     echo '<button onclick="toCheckout()">Checkout</button>';
-  }*/
+  }
   else {
     echo "No items in your cart.";
   }
-
+*/
 ?>
 
 
