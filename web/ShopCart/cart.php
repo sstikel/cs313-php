@@ -29,6 +29,7 @@
     echo "Items In Cart:<br><ul>";
     foreach ($_SESSION as $a) {
       var_dump($a);
+      echo $a[0];
     //echo "<li>" . $a[0] /*. " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>"*/;
     //$total += $a[2];
     //options to remove
