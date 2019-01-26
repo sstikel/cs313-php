@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shovel Depot</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script type="text/javascript">
+    <script type="text/javascript" src="javascript.js">
       
     </script>
 </head>
