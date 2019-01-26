@@ -26,7 +26,7 @@ function itemRemove(str) {
     
 }
 
-//////////////buttons Navigation///////////////////////
+//////////////buttons  Navigation///////////////////////
 
 function toBrowse() {
     //navigate to browse.php
@@ -38,9 +38,9 @@ function toCart() {
     window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/cart.php";
 }
 
-function toPurchase() {
-    //navigate to purchase.php
-    window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/purchase.php";
+function toCheckout() {
+    //navigate to checkout.php
+    window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/checkout.php";
 }
 
 function toConfirmation() {

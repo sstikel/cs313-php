@@ -16,7 +16,7 @@
   <br>
   <a href='browse.php'>Continue Shopping</a>
   <br>
-  <button onclick="toPurchase()">Checkout</button>
+  <button onclick="toCheckout()">Checkout</button>
 </body>
 </html>
 
