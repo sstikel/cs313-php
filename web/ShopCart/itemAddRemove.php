@@ -28,4 +28,7 @@
   //remove item from cart
 
 
+  //return a status
+  echo $_SESSION[str];
+
 ?>
