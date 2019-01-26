@@ -2,7 +2,7 @@
   session_start();
   $q = $_REQUEST["q"];
   $search = false;
-  $cartNum;
+  $cartNum = 0;
 
   if ($q !== "") {
       $q = strtolower($q);

@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $_SESSION['numCart'] /*= array()*/;
+  $_SESSION = array("empty", 0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
