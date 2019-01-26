@@ -22,6 +22,9 @@
 </header>
 <body>
     
+    <!--Items-->
+    <!--item description-->
+    <!--add to cart-->
     <div class="grid-cont">
       <div class="grid-item"><img src="img/folding.jpg" alt="Folding Shovel">01</div>
       <div class="grid-item"><img src="img/spade.jpg" alt="Spade Shovel">02</div>
@@ -29,12 +32,6 @@
       <div class="grid-item"><img src="img/trench.jpg" alt="Trenching Shovel">04</div>
       <div class="grid-item"><img src="img/snow.jpg" alt="Snow Shovel">05</div>
       <div class="grid-item"><img src="img/power.jpg" alt="Power Shovel">06</div>
- <!-- <div class="grid-item">07</div>
-      <div class="grid-item">08</div>
-      <div class="grid-item">09</div>
-      <div class="grid-item">10</div>
-      <div class="grid-item">11</div>
-      <div class="grid-item">12</div>  -->
 
     </div>
 
