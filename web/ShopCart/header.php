@@ -6,6 +6,6 @@
   echo "<div id='hName'><h2>Shovel Depot</h2></div>";
 
   //shopping cart
-  echo "Your Cart has <a href=''> <div id='cartNum'>0</div> items</a>";
+  echo "Your Cart has <a href='cart.php'> <div id='cartNum'>0</div> items</a>";
 
 ?>

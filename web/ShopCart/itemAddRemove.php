@@ -10,7 +10,7 @@
 
   }
 
-  //add item to cart
+  /////////////////////add item to cart/////////////////////////
   //check for same item - 
   foreach ($_SESSION as $a) {
       //add to it if found
@@ -25,9 +25,11 @@
   //make new item array if none found
   if ($search == false) {
     $_SESSION = array($q, 1);
+    $cartNum += 1;
  }
 
-  //remove item from cart
+ 
+  ///////////////////remove item from cart////////////////////////
 
 
   //return a status
