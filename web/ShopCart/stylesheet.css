@@ -9,7 +9,7 @@ body {
 
 .grid-cont {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   background-color: antiquewhite;
   padding: 12px;
 

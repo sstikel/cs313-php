@@ -2,6 +2,7 @@
   session_start();
   $q = $_REQUEST["q"];
   $search = false;
+  $cartNum;
 
   if ($q !== "") {
       $q = strtolower($q);
@@ -16,6 +17,7 @@
       if (stristr($q, substr($a, 0, $length))) {
           $search = true;
           $a[1] += 1;
+          $cartNum += 1;
       }
       
   }
@@ -29,6 +31,6 @@
 
 
   //return a status
-  echo $_SESSION[str];
+  echo $cartNum;
 
 ?>
