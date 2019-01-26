@@ -1,6 +1,6 @@
 <?php
   sessionstart();
-  $_SESSION["numCart"] = array();
+  //$_SESSION["numCart"] = array();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +11,12 @@
     <title>Document</title>
 </head>
 <header>
-  <?php include "/header.php"?>
+  <?php include "header.php"?>
 </header>
 <body>
-    
+    Beginning of my browse page
 </body>
 <footer>
-  <!--<?php //include "/footer.php"?>-->
+  <!--include footer.php-->
 </footer>
 </html>
