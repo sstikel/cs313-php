@@ -24,7 +24,7 @@
 
 <?php
   /////////////show cart items////////////
-  if ($_SESSION !== null) {
+  /*if ($_SESSION !== null) {
     echo "Items In Cart:<br><ul>";
     foreach ($_SESSION as $a) {
     echo "<li>" . $a[0] . " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>";
@@ -36,7 +36,7 @@
     ///////////total/////////////////////
     echo "Your total: $" . $total . "<br><br>";
     echo '<button onclick="toCheckout()">Checkout</button>';
-  }
+  }*/
   else {
     echo "No items in your cart.";
   }
