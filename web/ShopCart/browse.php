@@ -11,12 +11,12 @@
     <title>Document</title>
 </head>
 <header>
-  <?php //include "header.php"?>
+  <?php //require 'header.php'?>
 </header>
 <body>
     Beginning of my browse page
 </body>
 <footer>
-  <!--include footer.php-->
+  <!--require footer.php-->
 </footer>
 </html>
