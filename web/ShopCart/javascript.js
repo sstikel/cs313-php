@@ -25,3 +25,8 @@ function itemRemove(str) {
         xmlhttp.send();
     
 }
+
+function purchase() {
+    //navigate to 'confirmation.php'
+    //clear cart
+}
