@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shovel Depot</title>
-    <link rel="icon" type="image/gif/png" href="sicon.png">
+    <link rel="icon" type="image/gif/png" href="img/sicon.png">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script type="text/javascript" src="javascript.js"></script>
 </head>
