@@ -28,8 +28,8 @@
   if ($_SESSION !== null) {
     echo "Items In Cart:<br><ul>";
     foreach ($_SESSION as $a) {
-    echo "<li>" . $a[0] . " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>";
-    $total += $a[2];
+    echo "<li>" . $a[0] /*. " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>"*/;
+    //$total += $a[2];
     //options to remove
     //option to increase qty
     }
