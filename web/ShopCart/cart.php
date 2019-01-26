@@ -37,10 +37,10 @@
     echo "Your total: $" . $total . "<br><br>";
     */
     echo '<button onclick="toCheckout()">Checkout</button>';
-  //}
+  /*}
   else {
     echo "No items in your cart.";
-  }
+  }*/
 
 ?>
 
