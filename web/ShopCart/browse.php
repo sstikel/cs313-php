@@ -1,5 +1,5 @@
 <?php
-  sessionstart();
+  //sessionstart();
   //$_SESSION["numCart"] = array();
 ?>
 <!DOCTYPE html>
@@ -11,10 +11,10 @@
     <title>Document</title>
 </head>
 <header>
-  <?php //require 'header.php'?>
+  <!-- //require 'header.php'-->
 </header>
 <body>
-    Beginning of my browse page
+    Beginning of my browse page...
 </body>
 <footer>
   <!--require footer.php-->
