@@ -10,10 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shovel Depot</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script>
-      function addNum() {
-          <?php $_SESSION['numCart'] += 1; ?>
-      }
+    <script type="text/javascript">
+      
     </script>
 </head>
 <header>
@@ -41,13 +39,12 @@
     </div>
 
     <br>
-    <button onclick="addNum()">Plus 1</button>
 
 </body>
 <footer>
   <hr>
   <div class="dFooter">
-    <!--require footer.php-->
+    <?php require 'footer.php' ?>
   </div>
 </footer>
 </html>
