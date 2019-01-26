@@ -1,5 +1,5 @@
-function addItem(str) {
-    
+function itemAdd(str) {
+      console.log("Called: itemAdd()");
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -10,8 +10,8 @@ function addItem(str) {
         xmlhttp.send();
 }
 
-function removeItem(str) {
-    
+function itemRemove(str) {
+    console.log("Called: itemRemove()");
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
