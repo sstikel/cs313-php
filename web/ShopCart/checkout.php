@@ -1,8 +1,8 @@
 <?php
 session_start();
-
-echo "Checkout page.....";
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@ echo "Checkout page.....";
 </head>
 <body>
     
-
+Checkout Page
 
 <?php
 ////////////Return to cart - button///////////
