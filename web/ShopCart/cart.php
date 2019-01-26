@@ -12,14 +12,19 @@
     <script src="javascript.js"></script>
 </head>
 <body>
-    
+  this will be the cart page
+  <br>
+  <a href='browse.php'>Continue Shoping</a>
+  <br>
+  <button onclick="toCheckout()">Checkout</button>
 </body>
 </html>
+
 <?php
-  echo "this will be the cart page";
+  
 
   ///////////Link back to browse////////////////
-  echo "<a href='browse.php'>Continue Shoping</a>";
+  
 
   /////////////show cart items////////////
   foreach ($_SESSION as $a) {
@@ -36,5 +41,5 @@
 
 //////////button - checkout////////////
 ?>
-<button onclick="toCheckout()">Checkout</button>
+
 

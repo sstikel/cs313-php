@@ -14,8 +14,8 @@ echo "Checkout page.....";
 </head>
 <body>
     
-</body>
-</html>
+
+
 <?php
 ////////////Return to cart - button///////////
 
@@ -36,3 +36,6 @@ echo '<button onclick="toConfirmation()">Purchase</button>';
 
 
 ?>
+
+</body>
+</html>
