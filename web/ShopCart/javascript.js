@@ -26,12 +26,22 @@ function itemRemove(str) {
     
 }
 
-function checkout() {
+function toBrowse() {
+    //navigate to browse.php
+    window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/browse.php";
+}
+
+function toCart() {
+    //navigate to cart.php
+    window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/cart.php";
+}
+
+function toPurchase() {
     //navigate to purchase.php
     window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/purchase.php";
 }
 
-function purchase() {
+function toConfirmation() {
     //navigate to 'confirmation.php'
     window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/confirmation.php";
     //clear cart
