@@ -26,6 +26,8 @@ function itemRemove(str) {
     
 }
 
+//////////////buttons Navigation///////////////////////
+
 function toBrowse() {
     //navigate to browse.php
     window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/browse.php";

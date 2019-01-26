@@ -16,7 +16,7 @@ echo "Checkout page.....";
 
 
 ///////////////Purchase - button//////////// -maybe a return to cart btn as well
-echo "<button onclick='toConfirmation()'>Purchase</button>";
+echo '<button onclick="toConfirmation()">Purchase</button>';
 
 
 
