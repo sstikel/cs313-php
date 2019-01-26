@@ -25,13 +25,44 @@
     <!--Items-->
     <!--item description-->
     <!--add to cart-->
+    <!--price-->
     <div class="grid-cont">
-      <div class="grid-item"><img src="img/folding.jpg" alt="Folding Shovel">01</div>
-      <div class="grid-item"><img src="img/spade.jpg" alt="Spade Shovel">02</div>
-      <div class="grid-item"><img src="img/transfer.jpg" alt="Transfer Shovel">03</div>
-      <div class="grid-item"><img src="img/trench.jpg" alt="Trenching Shovel">04</div>
-      <div class="grid-item"><img src="img/snow.jpg" alt="Snow Shovel">05</div>
-      <div class="grid-item"><img src="img/power.jpg" alt="Power Shovel">06</div>
+      <div class="grid-item">
+        <img src="img/folding.jpg" alt="Folding Shovel">
+        01 <!--Make link to description page-->
+        <button id="" onclick="itemAdd('folding')">Add</button>
+        <button id="" onclick="itemRemove('folding')">Remove</button>
+      </div>
+      <div class="grid-item">
+        <img src="img/spade.jpg" alt="Spade Shovel">
+        02 <!--Make link to description page-->
+        <button id="" onclick="itemAdd('spade')">Add</button>
+        <button id="" onclick="itemRemove('spade')">Remove</button>
+      </div>
+      <div class="grid-item">
+        <img src="img/transfer.jpg" alt="Transfer Shovel"
+        >03 <!--Make link to description page-->
+        <button id="" onclick="itemAdd('transfer')">Add</button>
+        <button id="" onclick="itemRemove('transfer')">Remove</button>
+      </div>
+      <div class="grid-item">
+        <img src="img/trench.jpg" alt="Trenching Shovel">
+        04 <!--Make link to description page-->
+        <button id="" onclick="itemAdd('trench')">Add</button>
+        <button id="" onclick="itemRemove('trench')">Remove</button>
+      </div>
+      <div class="grid-item">
+        <img src="img/snow.jpg" alt="Snow Shovel">
+        05 <!--Make link to description page-->
+        <button id="" onclick="itemAdd('snow')">Add</button>
+        <button id="" onclick="itemRemove('snow')">Remove</button>
+      </div>
+      <div class="grid-item">
+        <img src="img/power.jpg" alt="Power Shovel">
+        06 <!--Make link to description page-->
+        <button id="" onclick="itemAdd('power')">Add</button>
+        <button id="" onclick="itemRemove('power')">Remove</button>
+      </div>
 
     </div>
 
