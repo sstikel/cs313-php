@@ -28,14 +28,15 @@
   if ($_SESSION !== null) {
     echo "Items In Cart:<br><ul>";
     foreach ($_SESSION as $a) {
-    echo "<li>" . $a[0] /*. " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>"*/;
+      var_dump($a);
+    //echo "<li>" . $a[0] /*. " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>"*/;
     //$total += $a[2];
     //options to remove
     //option to increase qty
     }
     echo "</ul><br><br>";\
     ///////////total/////////////////////
-    echo "Your total: $" . $total . "<br><br>";
+    //echo "Your total: $" . $total . "<br><br>";
     
     echo '<button onclick="toCheckout()">Checkout</button>';
   }
