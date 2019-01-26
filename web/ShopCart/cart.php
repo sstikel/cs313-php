@@ -17,8 +17,9 @@
 
 
 ///////////total/////////////////////
-?>
+
 
 //////////button - checkout////////////
+?>
 <button onclick="toCheckout()">Checkout</button>
 
