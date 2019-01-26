@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $total = 0;
 ?>
 
 <!DOCTYPE html>
@@ -11,35 +12,37 @@
     <title>Cart</title>
     <script src="javascript.js"></script>
 </head>
+<header>
+  <?php require "header.php" ?>
+</header>
 <body>
-  this will be the cart page
-  <br>
+  
   <a href='browse.php'>Continue Shopping</a>
   <br>
-  <button onclick="toCheckout()">Checkout</button>
-</body>
-</html>
+  
+
 
 <?php
-  
-
-  ///////////Link back to browse////////////////
-  
-
   /////////////show cart items////////////
-  foreach ($_SESSION as $a) {
-
+  if ($_SESSION !== null) {
+    echo "Items In Cart:<br><ul>";
+    foreach ($_SESSION as $a) {
+    echo "<li>" . $a[0] . " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>";
+    $total += $a[2];
+    //options to remove
+    //option to increase qty
+    }
+    echo "</ul><br><br>";\
+    ///////////total/////////////////////
+    echo "Your total: $" . $total . "<br><br>";
+    echo '<button onclick="toCheckout()">Checkout</button>';
+  }
+  else {
+    echo "No items in your cart.";
   }
 
-
-  //options to remove
-  //option to increase qty
-
-
-///////////total/////////////////////
-
-
-//////////button - checkout////////////
 ?>
 
 
+</body>
+</html>

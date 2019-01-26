@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+$name = htmlspecialchars($_POST["name"]);
+$address = htmlspecialchars($_POST["address"]);
+
 ///////////////confirm purchase/thank you//////////////
 ///show name
 ///show address
@@ -21,10 +24,9 @@ session_start();
     <script src="javascript.js"></script>
 </head>
 <body>
-    <h2>Thank you for your purchase, </h2>
     <?php 
-      echo $_POST["name"]; 
-      echo "<br><p>Your purchase will be shipped to " . $_POST["address"] . "<br>";
+      echo "<h2>Thank you for your purchase, </h2>" . $name; 
+      echo "<br><p>Your purchase will be shipped to " . $address . "<br><br>";
 
     ?>
     <a href="browse.php">Return to shopping</a>

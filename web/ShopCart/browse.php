@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $_SESSION = array("empty", 0);
+  $_SESSION = array("empty", 0, 0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +21,7 @@
 </header>
 <body>
     
+    <!--Grid-->
     <!--Items-->
     <!--item description-->
     <!--add to cart-->
@@ -64,8 +65,10 @@
       </div>
 
     </div>
+     <!--Grid End-->
+    <br><br>
+    <a href="cart.php">View Cart</a>
 
-    <br>
 
 </body>
 <footer>

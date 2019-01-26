@@ -40,7 +40,8 @@ function toCart() {
 
 function toCheckout() {
     //navigate to checkout.php
-    window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/checkout.php";
+    //window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/checkout.php";
+    window.location.href = "checkout.php";
 }
 
 function toConfirmation() {

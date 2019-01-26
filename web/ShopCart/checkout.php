@@ -18,7 +18,7 @@ echo "Checkout page.....";
 
 <?php
 ////////////Return to cart - button///////////
-echo '<button onclick="toCart()">Return to Cart</button>';
+echo '<button onclick="toCart()">Return to Cart</button><br>';
 
 ///////////Personal info - form//////////////
 //name
@@ -32,15 +32,6 @@ echo '<button onclick="toCart()">Return to Cart</button>';
   <textarea rows="3" cols="35" name="address"></textarea><br>
   <input type="submit" value="Purchase"><br>
 </form>
-
-<?php
-///////////////Purchase - button//////////// -maybe a return to cart btn as well
-echo '<button onclick="toConfirmation()">Purchase</button>';
-
-
-
-
-?>
 
 </body>
 </html>
