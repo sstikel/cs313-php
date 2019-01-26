@@ -18,17 +18,20 @@ echo "Checkout page.....";
 
 <?php
 ////////////Return to cart - button///////////
-
+echo '<button onclick="toCart()">Return to Cart</button>';
 
 ///////////Personal info - form//////////////
 //name
-
 //address
-
 //no more info to collect
+?>
+<form action="confirmation.php" method="post">
+  Name:<input type="text" name="name"><br>
+  Address: <textarea rows="3" cols="35" name="address"><br>
+  <input type="submit" value="Purchase"><br>
+</form>
 
-
-
+<?php
 ///////////////Purchase - button//////////// -maybe a return to cart btn as well
 echo '<button onclick="toConfirmation()">Purchase</button>';
 

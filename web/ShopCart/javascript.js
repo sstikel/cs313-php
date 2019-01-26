@@ -46,5 +46,6 @@ function toCheckout() {
 function toConfirmation() {
     //navigate to 'confirmation.php'
     window.location.href = "https://warm-refuge-37557.herokuapp.com/ShopCart/confirmation.php";
-    //clear cart
+   
+    //TODO clear cart
 }
