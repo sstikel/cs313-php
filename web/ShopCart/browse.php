@@ -1,5 +1,5 @@
 <?php
-  //sessionstart();
+  session_start();
   //$_SESSION["numCart"] = array();
 ?>
 <!DOCTYPE html>
