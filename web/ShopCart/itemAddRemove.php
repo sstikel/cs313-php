@@ -4,9 +4,9 @@
   $search = false;
   $cartNum = 0;
 
-  if (global $q !== "") {
-      global $q = strtolower($q);
-      global $length = strlen($q);
+  if ($q !== "") {
+      $q = strtolower($q);
+      $length = strlen($q);
 
   }
 
@@ -14,18 +14,18 @@
   //check for same item - 
   foreach ($_SESSION as $a) {
       //add to it if found
-      if (global $q == $a[0]) {
-        global $search = true;
-        global $a[1] += 1;
-        global $cartNum += 1;
+      if ($q == $a[0]) {
+        $search = true;
+        $a[1] += 1;
+        $cartNum += 1;
       }
       
   }
   
   //make new item array if none found
-  if (global $search == false) {
-    global $_SESSION = array($q, 1, 0);
-    global $cartNum += 1;
+  if ($search == false) {
+    $_SESSION = array($q, 1, 0);
+    $cartNum += 1;
  }
 
  
