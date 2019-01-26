@@ -27,7 +27,7 @@ echo '<button onclick="toCart()">Return to Cart</button>';
 ?>
 <form action="confirmation.php" method="post">
   Name:<input type="text" name="name"><br>
-  Address: <textarea rows="3" cols="35" name="address"><br>
+  Address: <textarea rows="3" cols="35" name="address"></textarea><br>
   <input type="submit" value="Purchase"><br>
 </form>
 
