@@ -17,15 +17,14 @@
   </div>
 </header>
 <body>
-    Beginning of my browse page...
+    
     <div class="grid-cont">
-      <div class="grid-item"><img src="https://www.amazon.com/Coleman-2000014878-Folding-Shovel/dp/B0009PUTDE" alt="Folding Shovel">
-      01</div>
-      <div class="grid-item">02</div>
-      <div class="grid-item">03</div>
-      <div class="grid-item">04</div>
-      <div class="grid-item">05</div>
-      <div class="grid-item">06</div>
+      <div class="grid-item"><img src="" alt="Folding Shovel">01</div>
+      <div class="grid-item"><img src="" alt="Spade Shovel">02</div>
+      <div class="grid-item"><img src="" alt="Transfer Shovel">03</div>
+      <div class="grid-item"><img src="" alt="Trenching Shovel">04</div>
+      <div class="grid-item"><img src="" alt="Snow Shovel">05</div>
+      <div class="grid-item"><img src="" alt="Power Shovel">06</div>
       <div class="grid-item">07</div>
       <div class="grid-item">08</div>
       <div class="grid-item">09</div>

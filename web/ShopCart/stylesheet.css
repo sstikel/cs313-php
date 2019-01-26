@@ -2,6 +2,9 @@
     background-color: aliceblue;
 }
 
+body {
+    font-size: 2em;
+}
 
 .grid-cont {
   display: grid;
