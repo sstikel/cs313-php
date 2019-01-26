@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $_SESSION["numCart"] = array();
+  $_SESSION['numCart'] = array();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -26,6 +26,7 @@
       <!--For now this page can just say "Coming Soon"-->
       <ul>
         <li><a href="https://warm-refuge-37557.herokuapp.com/hello.html">HelloWorld!</a></li>
+        <li><a href="https://warm-refuge-37557.herokuapp.com/ShopCart/browse.php">Shopping Cart</a></li>
       </ul>
     </div>
   </body>
