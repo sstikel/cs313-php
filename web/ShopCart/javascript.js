@@ -4,7 +4,7 @@ function itemAdd(str) {
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 //document.getElementById("txtHint").innerHTML = this.responseText;
-                console.log("Return: this.responseText");
+                console.log("Return: " + this.responseText);
             }
         }
         xmlhttp.open("GET", "itemAddRemove.php?q="+str, true);
