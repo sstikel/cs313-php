@@ -1,5 +1,6 @@
 .dHeader {
     background-color: aliceblue;
+
 }
 
 body {
@@ -20,6 +21,11 @@ border: 1px solid black;
 font-size: 1em;
 text-align: center;
 
+}
+
+img {
+    width: auto;
+    height: 75%;
 }
 
 .dFooter {
