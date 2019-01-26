@@ -15,7 +15,7 @@
 </head>
 <header>
   <div class="dHeader">
-    <?php require 'header.php' ?>
+    <?php require 'header.php' ?> 
   </div>
   <hr>
 </header>

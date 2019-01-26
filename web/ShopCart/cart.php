@@ -14,9 +14,9 @@
 <body>
   this will be the cart page
   <br>
-  <a href='browse.php'>Continue Shoping</a>
+  <a href='browse.php'>Continue Shopping</a>
   <br>
-  <button onclick="toCheckout()">Checkout</button>
+  <button onclick="toPurchase()">Checkout</button>
 </body>
 </html>
 
