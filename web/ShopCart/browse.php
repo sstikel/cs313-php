@@ -19,7 +19,8 @@
 <body>
     Beginning of my browse page...
     <div class="grid-cont">
-      <div class="grid-item">01</div>
+      <div class="grid-item"><img src="https://www.amazon.com/Coleman-2000014878-Folding-Shovel/dp/B0009PUTDE" alt="Folding Shovel">
+      01</div>
       <div class="grid-item">02</div>
       <div class="grid-item">03</div>
       <div class="grid-item">04</div>
