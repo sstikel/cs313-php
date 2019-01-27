@@ -1,5 +1,12 @@
 <?php
   session_start();
+  $_SESSION[] = array("folding", 0, 11); 
+  $_SESSION[] = array("spade", 0, 12);
+  $_SESSION[] = array("transfer", 0, 13);
+  $_SESSION[] = array("trench", 0 , 14);
+  $_SESSION[] = array("snow", 0, 15);
+  $_SESSION[] = array("power", 0, 50000);
+
   $q = $_REQUEST["q"];
   $search = false;
   $cartNum = 0;
