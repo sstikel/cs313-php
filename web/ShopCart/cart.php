@@ -2,11 +2,11 @@
   session_start();
   $total = 0;
   $_SESSION = array(
-    array("folding", 0, 11)
-    array("spade", 0, 12)
-    array("transfer", 0, 13)
-    array("trench", 0 , 14)
-    array("snow", 0, 15)
+    array("folding", 0, 11),
+    array("spade", 0, 12),
+    array("transfer", 0, 13),
+    array("trench", 0 , 14),
+    array("snow", 0, 15),
     array("power", 0, 50000)
   );
   
