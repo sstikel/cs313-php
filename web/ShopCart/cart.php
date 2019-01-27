@@ -9,6 +9,7 @@
     array("snow", 0, 15),
     array("power", 3, 50000)
   );*/
+  var_dump($_SESSION);
   
 ?>
 
