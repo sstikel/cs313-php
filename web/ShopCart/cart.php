@@ -32,9 +32,9 @@
 <?php
   /////////////show cart items////////////
   if ($_SESSION !== null) {
-    echo "Items In Cart:<br><ul>";
+    echo "<h3>Items In Cart:</h3><br><ul>";
     foreach ($_SESSION as $a) {      
-      echo "<li>" . $a[0] . ", $" . $a[1] . ", Qty: " . $a[2] . "</li><br>";
+      echo "<li>" . $a[0] . ", $" . $a[2] . ", Qty: " . $a[1] . "</li><br>";
     $total += $a[2];
     //options to remove
     //option to increase qty
@@ -42,7 +42,7 @@
     echo "</ul><br><br>";
 
     ///////////total/////////////////////
-    //echo "Your total: $" . $total . "<br><br>";
+    echo "<h3>Your total: $" . $total . "</h3><br><br>";
     
     echo '<button onclick="toCheckout()">Checkout</button>';
   }
