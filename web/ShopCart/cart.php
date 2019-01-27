@@ -36,7 +36,7 @@
     foreach ($_SESSION as $a) {      
       if ($a[1] !== 0) {
         echo "<li>" . $a[0] . " shovel, $" . $a[2] . ", Qty: " . $a[1] . "</li>";
-        echo '<button onclick="itemRemove("' . $a[0] . '")">Remove</button><br><br>';
+        echo "<button onclick='itemRemove($a[0])'>Remove</button><br><br>";
         $total += $a[2] * $a[1];
       }
     //options to remove
