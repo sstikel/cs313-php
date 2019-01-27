@@ -39,7 +39,7 @@
     //options to remove
     //option to increase qty
     }
-    echo "</ul><br><br>";\
+    echo "</ul><br><br>";
     ///////////total/////////////////////
     //echo "Your total: $" . $total . "<br><br>";
     
