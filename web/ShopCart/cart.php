@@ -28,15 +28,15 @@
   
   <a href='browse.php'>Continue Shopping</a>
   <br>
-  
-
 
 <?php
   /////////////show cart items////////////
   if ($_SESSION !== null) {
     //echo "Items In Cart:<br><ul>";
     foreach ($_SESSION as $a) {
-      echo "<li>" . $_SESSION[0][0] /*. " $" . $a[1] . ", Qty: " . $a[2] .*/ "</li><br>";
+      echo "This is stupid...<br>";
+      
+      //echo "<li>" . $_SESSION[0][0] /*. " $" . $a[1] . ", Qty: " . $a[2] .*/ "</li><br>";
     //$total += $a[2];
     //options to remove
     //option to increase qty
