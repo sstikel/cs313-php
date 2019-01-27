@@ -3,11 +3,11 @@
   $total = 0;
   $_SESSION = array(
     array("folding", 0, 11),
-    array("spade", 0, 12),
+    array("spade", 1, 12),
     array("transfer", 0, 13),
-    array("trench", 0 , 14),
+    array("trench", 2 , 14),
     array("snow", 0, 15),
-    array("power", 0, 50000)
+    array("power", 3, 50000)
   );
   
 ?>
