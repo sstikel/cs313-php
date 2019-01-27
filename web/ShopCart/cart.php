@@ -1,7 +1,7 @@
 <?php
   session_start();
   $total = 0;
-  
+  var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
