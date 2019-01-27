@@ -35,7 +35,7 @@
     echo "<h3>Items In Cart:</h3><br><ul>";
     foreach ($_SESSION as $a) {      
       echo "<li>" . $a[0] . ", $" . $a[2] . ", Qty: " . $a[1] . "</li><br>";
-    $total += $a[2];
+    $total += $a[2] * $a[1];
     //options to remove
     //option to increase qty
     }
