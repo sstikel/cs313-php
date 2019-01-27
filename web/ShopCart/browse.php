@@ -8,8 +8,6 @@
     array("snow", 0, 15),
     array("power", 0, 50000)
   );
-
-  var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">

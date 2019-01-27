@@ -4,11 +4,11 @@
 
   $q = $_REQUEST["q"];
   $search = false;
-  $cartNum = 0;
+  
 
   if ($q !== "") {
       $q = strtolower($q);
-      $length = strlen($q);
+      //$length = strlen($q);
 
   }
 
@@ -18,8 +18,8 @@
       //add to it if found
       if ($q == $a[0]) {
         $search = true;
-        $_SESSION[1] += 1;
-        $cartNum += 1;
+        $a[1] += 1;
+        
       }
       
   }
@@ -27,7 +27,7 @@
   //make new item array if none found
   if ($search == false) {
     $_SESSION = array($q, 1, 0);
-    $cartNum += 1;
+    
  }
 
  
@@ -35,6 +35,6 @@
 
 
   //return a status
-  echo $cartNum;
+  echo $q;
 
 ?>

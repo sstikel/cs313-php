@@ -62,6 +62,6 @@ function toConfirmation() {
             
         }
     }
-    xmlhttp.open("GET", "clearCart.php?q="+str, true);
+    xmlhttp.open("GET", "clearCart.php", true);
     xmlhttp.send();
 }
