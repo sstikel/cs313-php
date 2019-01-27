@@ -35,8 +35,8 @@
     echo "<h3>Items In Cart:</h3><br><ul>";
     foreach ($_SESSION as $a) {      
       if ($a[1] !== 0) {
-        echo "<li>" . $a[0] . " shovel, $" . $a[2] . ", Qty: " . $a[1] . "</li><br>";
-        echo '<button onclick="itemRemove(' . $a[0] . '">Remove</button><br>';
+        echo "<li>" . $a[0] . " shovel, $" . $a[2] . ", Qty: " . $a[1] . "</li>";
+        echo '<button onclick="itemRemove(' . $a[0] . ')">Remove</button><br><br>';
         $total += $a[2] * $a[1];
       }
     //options to remove
