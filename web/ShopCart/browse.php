@@ -6,6 +6,8 @@
   $_SESSION[] = array("trench", 0 , 14);
   $_SESSION[] = array("snow", 0, 15);
   $_SESSION[] = array("power", 0, 50000);
+
+  var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
