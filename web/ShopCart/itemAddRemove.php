@@ -18,7 +18,7 @@
       //add to it if found
       if ($q == $a[0]) {
         $search = true;
-        $a[1] += 1;
+        $_SESSION[1] += 1;
         $cartNum += 1;
       }
       
