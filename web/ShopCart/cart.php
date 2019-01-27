@@ -33,12 +33,9 @@
   /////////////show cart items////////////
   if ($_SESSION !== null) {
     echo "Items In Cart:<br><ul>";
-    foreach ($_SESSION as $a) {
-      echo "This is stupid...<br>";
-      echo $a[0];
-      
-      echo "<li>" . $a[0] . " $" . $a[1] . ", Qty: " . $a[2] . "</li><br>";
-    //$total += $a[2];
+    foreach ($_SESSION as $a) {      
+      echo "<li>" . $a[0] . ", $" . $a[1] . ", Qty: " . $a[2] . "</li><br>";
+    $total += $a[2];
     //options to remove
     //option to increase qty
     }
