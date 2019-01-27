@@ -1,11 +1,13 @@
 <?php
   session_start();
-  $_SESSION[] = array("folding", 0, 11); 
-  $_SESSION[] = array("spade", 0, 12);
-  $_SESSION[] = array("transfer", 0, 13);
-  $_SESSION[] = array("trench", 0 , 14);
-  $_SESSION[] = array("snow", 0, 15);
-  $_SESSION[] = array("power", 0, 50000);
+  $_SESSION = array(
+    array("folding", 0, 11),
+    array("spade", 0, 12),
+    array("transfer", 0, 13),
+    array("trench", 0 , 14),
+    array("snow", 0, 15),
+    array("power", 0, 50000)
+  );
 
   var_dump($_SESSION);
 ?>

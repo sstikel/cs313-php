@@ -52,5 +52,16 @@ function toConfirmation() {
     //navigate to 'confirmation.php'
     window.location.href = "confirmation.php";
    
-    //TODO clear cart
+    //clear cart
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            cart = 0;
+            document.getElementById("cartNum").innerHTML = cart;
+            console.log("Return: " + this.responseText);
+            
+        }
+    }
+    xmlhttp.open("GET", "clearCart.php?q="+str, true);
+    xmlhttp.send();
 }

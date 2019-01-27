@@ -1,14 +1,14 @@
 <?php
   session_start();
   $total = 0;
-  $_SESSION = array(
+  /*$_SESSION = array(
     array("folding", 0, 11),
     array("spade", 1, 12),
     array("transfer", 0, 13),
     array("trench", 2 , 14),
     array("snow", 0, 15),
     array("power", 3, 50000)
-  );
+  );*/
   
 ?>
 
@@ -36,7 +36,7 @@
     foreach ($_SESSION as $a) {      
       if ($a[1] !== 0) {
         echo "<li>" . $a[0] . " shovel, $" . $a[2] . ", Qty: " . $a[1] . "</li>";
-        echo "<button onclick='itemRemove("$a[0]")'>Remove</button><br><br>";
+        echo "<button onclick=''>Remove</button><br><br>";
         $total += $a[2] * $a[1];
       }
     //options to remove
