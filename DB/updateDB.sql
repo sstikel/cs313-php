@@ -92,3 +92,48 @@ ALTER TABLE db.author
 --drop tables: title, instructions
 DROP TABLE IF EXISTS db.title;
 DROP TABLE IF EXISTS db.instructions;
+
+--create authors (fake)
+INSERT INTO db.author (name, username, pswrd) VALUES ('John Smith', 'JS', 'password');
+INSERT INTO db.author (name, username, pswrd) VALUES ('Pocahontas', 'Pgirl', 'abc123');
+INSERT INTO db.author (name, username, pswrd) VALUES ('Geronimo', 'Gman', 'qwerty');
+
+--create recipes
+INSERT INTO db.recipe (title, instructions, author_id) VALUES ( 'No Bake Cookies', 'Mix the sugar, and milk in a pot on medium heat. Let boil for 1 min. Quickly stir in peanut butter, vanilla, and oatmeal. Drop by spoonful onto wax paper and let harden.', 2);
+INSERT INTO db.recipe (title, instructions, author_id) VALUES ( 'Chocolate Chip Cookie Bars', 'Cream sugars and butter together. Mix in eggs, then salt, baking soda, and vanilla. Mix in flour. Drop by spoonful onto greased cookie sheet. Bake at 350 F for 8-10 min.', 3);
+INSERT INTO db.recipe (title, instructions, author_id) VALUES ( 'Bananas and Cream', 'Slice bananas into 1/2 in sections. Pour table cream over them and sprinkle sugar.', 1);
+
+--create ingredients/link recipe to them
+--No Bake Cookies
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES ('Sugar', 1, 3, 1);
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES ('Milk', 1/2, 3, 1);
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES ('Cocoa', 3, 1, 1);
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES ('Peanut Butter', .5, 3, 1);
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES ('Vanilla', 1, 1, 1);
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES ('Oatmeal', 3, 3, 1);
+
+--Choc. Chip Cookies
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES
+  ('Butter', 1, 3, 2),
+  ('Sugar', .75, 3, 2),
+  ('Brown Sugar', .75, 3, 2),
+  ('Egg', 2, 9, 2),
+  ('Baking Soda', 1, 1, 2),
+  ('Salt', 1, 1, 2),
+  ('Vanilla', 1, 1, 2),
+  ('Flour', 2.25, 3, 2),
+  ('Chocolate Chips (Semi-Sweet)', .5, 3, 2)
+  ;
+
+--Bananas and Cream
+INSERT INTO db.ingredient (ingredient, qty, measurement_id, recipe_id) VALUES ('Banana', 1, 9, 3),
+  ('Table Cream', 3, 2, 3),
+  ('Sugar', 1, 1, 3);
+
+
+--add 'qty' row to db.measurement
+INSERT INTO db.measurement (measurement) VALUES ('qty');
+
+
+
+--TODO Change ingredient:qty to double (accept fractions and decimal)
