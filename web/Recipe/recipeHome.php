@@ -7,6 +7,8 @@
  * sign in
  * 
  *******************************/ 
+  require 'web/generalFiles/dbAccess.php';
+
 ?>
 
 <!DOCTYPE html>
