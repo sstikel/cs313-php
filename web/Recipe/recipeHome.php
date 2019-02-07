@@ -7,7 +7,7 @@
  * sign in
  * 
  *******************************/ 
-  require 'web/generalFiles/dbAccess.php';
+  require 'generalFiles/dbAccess.php';
 
 ?>
 
@@ -17,9 +17,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/gif/png" href="web/generalImg/sicon.png"> <!--add to all other pages-->
-    <link rel="stylesheet" type="text/css" href="web/generalFiles/generalSS.css">
-    <script type="text/javascript" src="web/generalFiles/generalJS.js"></script>
+    <link rel="icon" type="image/gif/png" href="generalImg/sicon.png"> <!--add to all other pages-->
+    <link rel="stylesheet" type="text/css" href="generalFiles/generalSS.css">
+    <script type="text/javascript" src="generalFiles/generalJS.js"></script>
     <title>Recipe Home</title>
 </head>
 <header>
