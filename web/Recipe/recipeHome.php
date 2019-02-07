@@ -34,11 +34,19 @@
 
 
   <!--List recipes-->
-
+  <ul>
+  <?php
+    
+    //output each recipe title as a link
+    foreach () {
+        
+    }
+  ?>
+  <ul>
 
 </body>
 <footer>
   <hr>
-  <a href="Wk02Home.php">Home</a>
+  <a href="../Wk02Home.php">Sam's Homepage</a>
 </footer>
 </html>
