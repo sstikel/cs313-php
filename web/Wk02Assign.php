@@ -27,6 +27,7 @@
       <ul>
         <li><a href="https://warm-refuge-37557.herokuapp.com/hello.html">HelloWorld!</a></li>
         <li><a href="https://warm-refuge-37557.herokuapp.com/ShopCart/browse.php">Shopping Cart</a></li>
+        <li><a href="https://warm-refuge-37557.herokuapp.com/Recipe/recipeHome.php">Recipe</a></li>
       </ul>
     </div>
   </body>
