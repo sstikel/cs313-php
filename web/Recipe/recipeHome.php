@@ -32,7 +32,10 @@
 </header>
 <body>
   <!--Search Recipes-->
-
+  <form action="recipeHome.php" method="get">
+    Recipe Search: <input type="text" name="title">
+    <input type="submit">  
+  </form>
 
   <!--List recipes-->
   <ul>
