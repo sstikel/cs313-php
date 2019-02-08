@@ -61,9 +61,11 @@ require '../generalFiles/dbAccess.php';
   echo '<h1>' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
 
   //ingredients - bulleted - qty - measurement
-  foreach ($recipe["ingredient"] as $ingr)
-  echo '<li>' . $ingr["qty"] . ' ' . $ingr["measurement"] . ' - ' . $ingr["ingredient"] . '<li>'
+  //foreach ($recipe["ingredient"] as $ingr)
+  //echo '<li>' . $ingr["qty"] . ' ' . $ingr["measurement"] . ' - ' . $ingr["ingredient"] . '<li>'
   
+  //test join...
+  var_dump($recipe);
 
   //instructions
   echo '</ul></div><br><p>Instructions<br>' . $recipe["instructions"] . '</p><br>';
