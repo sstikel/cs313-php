@@ -49,7 +49,7 @@
     $titles = array();
     foreach ($recipes as $recipe) {
         array_push($titles, $recipe["title"]);
-        echo '<li><a href="recipeDetail.php?id=' . $recipe["id"] . '">' . $recipe["title"] '</a><li><br>';
+        echo '<li><a href="recipeDetail.php?id=' . $recipe["id"] . '">' . $recipe["title"] . '</a><li><br>';
     }
   ?>
   <ul>
