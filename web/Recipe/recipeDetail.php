@@ -40,9 +40,19 @@ require '../generalFiles/dbAccess.php';
 /////////TODO - add in db calls for qty and measurement///////////////
 //going to need to join for this......
 
+//////TODO - Search 'like' what is typed in
+
   $id = $_GET["id"];
   $db = getDb();
-  $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');
+  //Original - $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');
+  $Stmt = $db->prepare('
+    SELECT r.title, i.ingredient, i.qty, m.measurement 
+    FROM db.recipe r 
+    JOIN db.ingredient i 
+      ON r.id = i.recipe_id
+    JOIN db.measurement m
+      ON i.measurement_id = m.id
+    WHERE id= :id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $Stmt->execute();
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
@@ -51,8 +61,8 @@ require '../generalFiles/dbAccess.php';
   echo '<h1>' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
 
   //ingredients - bulleted - qty - measurement
-  //foreach ()
-  //echo '<li>' . $ingredient["ingredient"] . ' - ' . qty . ' ' . measurement . '<li>'
+  foreach ($recipe["ingredient"] as $ingr)
+  echo '<li>' . $ingr["qty"] . ' ' . $ingr["measurement"] . ' - ' . $ingr["ingredient"] . '<li>'
   
 
   //instructions
