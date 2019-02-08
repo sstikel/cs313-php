@@ -37,9 +37,19 @@
   <ul>
   <?php
     
-    //output each recipe title as a link
-    foreach () {
-        
+    $db = getDb();
+    if (isset($_GET["title"])) {
+        $Stmt = $db->prepare('SELECT * FROM scripture WHERE book=:book');
+        $Stmt->bindParam(':book', $_GET["book"], PDO::PARAM_STR);
+    } else {
+        $Stmt = $db->prepare('SELECT * FROM scripture');
+    }
+    $Stmt->execute();
+    $recipes = $Stmt->fetchAll(PDO::FETCH_ASSOC);
+    $titles = array();
+    foreach ($recipes as $recipe) {
+        array_push($titles, $recipe["title"]);
+        echo '<li><a href="recipeDetail.php?id=' . $recipe["id"] . '">' . $recipe["title"] '</a><li><br>';
     }
   ?>
   <ul>
