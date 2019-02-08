@@ -3,3 +3,17 @@
 * Used to style many pages without making a new CSS
 *
 */
+
+body {
+    background-color: steelblue;
+}
+
+
+
+
+/*divs*/
+
+/*Recipe*/
+.dIngr {
+  font-size: 2em;
+}

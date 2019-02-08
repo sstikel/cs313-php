@@ -28,6 +28,7 @@
   <!--Sign in button-->
 
   <hr>
+  <br>
 </header>
 <body>
   <!--Search Recipes-->
@@ -56,6 +57,7 @@
 
 </body>
 <footer>
+  <br>
   <hr>
   <a href="../Wk02Home.php">Sam's Homepage</a>
 </footer>
