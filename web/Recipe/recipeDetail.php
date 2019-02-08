@@ -42,10 +42,10 @@ require '../generalFiles/dbAccess.php';
 
   $id = $_GET["id"];
   $db = getDb();
-  $scripturesStmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');
-  $scripturesStmt->bindParam(':id', $id, PDO::PARAM_INT);
-  $scripturesStmt->execute();
-  $scripture = $scripturesStmt->fetch(PDO::FETCH_ASSOC);
+  $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');
+  $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
+  $Stmt->execute();
+  $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
      
   //Title
   echo '<h1>' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
