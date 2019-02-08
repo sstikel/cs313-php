@@ -39,10 +39,10 @@
     
     $db = getDb();
     if (isset($_GET["title"])) {
-        $Stmt = $db->prepare('SELECT * FROM scripture WHERE book=:book');
-        $Stmt->bindParam(':book', $_GET["book"], PDO::PARAM_STR);
+        $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE title=:title');
+        $Stmt->bindParam(':title', $_GET["title"], PDO::PARAM_STR);
     } else {
-        $Stmt = $db->prepare('SELECT * FROM scripture');
+        $Stmt = $db->prepare('SELECT * FROM db.recipe');
     }
     $Stmt->execute();
     $recipes = $Stmt->fetchAll(PDO::FETCH_ASSOC);
