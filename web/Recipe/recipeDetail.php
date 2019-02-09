@@ -59,14 +59,15 @@ require '../generalFiles/dbAccess.php';
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
   
   //call ingredient data
-  $Stmt = $db->prepare('
+  /*$Stmt = $db->prepare('
     SELECT ingredient, qty, measurement_id 
     FROM db.ingredient     
     WHERE recipe_id = :id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $Stmt->execute();
   $ingredient = $Stmt->fetch(PDO::FETCH_ASSOC);
-  
+  */
+
   //call measurement data
   /*$Stmt = $db->prepare('
     SELECT measurement 
@@ -76,9 +77,9 @@ require '../generalFiles/dbAccess.php';
   $Stmt->execute();
   $ingredient = $Stmt->fetch(PDO::FETCH_ASSOC);
     */
-     
+
   //Title
-  echo '<h1>Title:' . $recipe["title"] . '</h1><br>';//<br><div class="dIngr"><ul>';
+  echo '<h1>Title:' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
 
   //ingredients - bulleted - qty - measurement
   //foreach ($recipe["ingredient"] as $ingr)
@@ -88,7 +89,7 @@ require '../generalFiles/dbAccess.php';
   //var_dump($recipe);
 
   //instructions
- // echo '</ul></div><br><p>Instructions<br>' . $recipe["instructions"] . '</p><br>';
+  echo '</ul></div><br><p>Instructions:<br>' . $recipe["instructions"] . '</p><br>';
 
   //TODO - notes from user
 
