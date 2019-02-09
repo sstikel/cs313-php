@@ -52,7 +52,7 @@ require '../generalFiles/dbAccess.php';
   $Stmt = $db->prepare('
     SELECT r.title
     FROM db.recipe r 
-    JOIN db.ingredient I
+    JOIN db.ingredient i
       USING (r.id)
     
     
@@ -62,7 +62,7 @@ require '../generalFiles/dbAccess.php';
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
      
   //Title
-  //echo '<h1>Title:' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
+  echo '<h1>Title:' . $recipe["title"] . '</h1><br>';//<br><div class="dIngr"><ul>';
 
   //ingredients - bulleted - qty - measurement
   //foreach ($recipe["ingredient"] as $ingr)
