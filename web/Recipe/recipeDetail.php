@@ -44,20 +44,21 @@ require '../generalFiles/dbAccess.php';
 
   $id = $_GET["id"];
   $db = getDb();
-  //Original - $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');
+  //Original - $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');, r.instructions 
   $Stmt = $db->prepare('
-    SELECT r.title, i.ingredient, i.qty, m.measurement 
+    SELECT r.title, i.ingredient, i.qty, m.measurement
     FROM db.recipe r 
     JOIN db.ingredient i 
-      ON r.id = i.id
+      ON r.id = i.recipe_id
     JOIN db.measurement m
-      ON i.id = m.id');
+      ON i.measurement_id = m.id
+    WHERE id= :id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $Stmt->execute();
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
      
   //Title
-  echo '<h1>Title:' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
+  //echo '<h1>Title:' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
 
   //ingredients - bulleted - qty - measurement
   //foreach ($recipe["ingredient"] as $ingr)
@@ -67,14 +68,15 @@ require '../generalFiles/dbAccess.php';
   //var_dump($recipe);
 
   //instructions
-  echo '</ul></div><br><p>Instructions<br>' . $recipe["instructions"] . '</p><br>';
+ // echo '</ul></div><br><p>Instructions<br>' . $recipe["instructions"] . '</p><br>';
 
   //TODO - notes from user
 
 
   //TODO - button - create user note
   ?>
-</body><footer>
+</body>
+<footer>
   <br>
   <hr>
   <a href="../Wk02Home.php">Sam's Homepage</a>
