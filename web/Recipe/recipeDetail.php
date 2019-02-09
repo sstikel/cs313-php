@@ -64,7 +64,7 @@ require '../generalFiles/dbAccess.php';
   //echo '<li>' . $ingr["qty"] . ' ' . $ingr["measurement"] . ' - ' . $ingr["ingredient"] . '<li>'
   
   //test join...
-  var_dump($recipe);
+  //var_dump($recipe);
 
   //instructions
   echo '</ul></div><br><p>Instructions<br>' . $recipe["instructions"] . '</p><br>';
