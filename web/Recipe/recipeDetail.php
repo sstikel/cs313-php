@@ -49,17 +49,33 @@ require '../generalFiles/dbAccess.php';
   $id = $_GET["id"];
   $db = getDb();
   //Original - $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');, r.instructions 
+  //call recipe data
   $Stmt = $db->prepare('
-    SELECT r.title
-    FROM db.recipe r 
-    JOIN db.ingredient i
-      ON r.id = i.recipe_id
-    
-    
+    SELECT title, instructions, author
+    FROM db.recipe     
     WHERE id= :id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $Stmt->execute();
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
+  
+  //call ingredient data
+  $Stmt = $db->prepare('
+    SELECT ingredient, qty, measurement_id 
+    FROM db.ingredient     
+    WHERE recipe_id = :id');
+  $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
+  $Stmt->execute();
+  $ingredient = $Stmt->fetch(PDO::FETCH_ASSOC);
+  
+  //call measurement data
+  /*$Stmt = $db->prepare('
+    SELECT measurement 
+    FROM db.measurement     
+    WHERE id = :id');
+  $Stmt->bindParam(':id', $ingredient["measurement_id"], PDO::PARAM_INT);
+  $Stmt->execute();
+  $ingredient = $Stmt->fetch(PDO::FETCH_ASSOC);
+    */
      
   //Title
   echo '<h1>Title:' . $recipe["title"] . '</h1><br>';//<br><div class="dIngr"><ul>';
