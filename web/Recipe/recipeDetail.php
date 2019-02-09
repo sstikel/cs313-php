@@ -48,12 +48,9 @@ require '../generalFiles/dbAccess.php';
 
   $id = $_GET["id"];
   $db = getDb();
-  //Original - $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');, r.instructions 
+  //Original - $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');
   //call recipe data
-  $Stmt = $db->prepare('
-    SELECT title, instructions, author
-    FROM db.recipe     
-    WHERE id= :id');
+  Original - $Stmt = $db->prepare('SELECT (title, instructions, author) FROM db.recipe WHERE id= :id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $Stmt->execute();
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
