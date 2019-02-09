@@ -49,9 +49,9 @@ require '../generalFiles/dbAccess.php';
     SELECT r.title, i.ingredient, i.qty, m.measurement 
     FROM db.recipe r 
     JOIN db.ingredient i 
-      ON r.id = i.recipe_id
+      ON r.id = i.id
     JOIN db.measurement m
-      ON i.measurement_id = m.id');
+      ON i.id = m.id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $Stmt->execute();
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
