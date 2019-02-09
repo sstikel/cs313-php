@@ -77,7 +77,7 @@ require '../generalFiles/dbAccess.php';
     */
 
   //Title
-  echo '<h1>Title:' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
+  echo '<h1>Title: ' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
 
   //ingredients - bulleted - qty - measurement
   //foreach ($recipe["ingredient"] as $ingr)
