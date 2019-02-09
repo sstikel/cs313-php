@@ -53,7 +53,7 @@ require '../generalFiles/dbAccess.php';
     SELECT r.title
     FROM db.recipe r 
     JOIN db.ingredient i
-      USING (r.id)
+      ON r.id = i.recipe_id
     
     
     WHERE id= :id');
