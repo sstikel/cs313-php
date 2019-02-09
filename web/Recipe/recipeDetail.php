@@ -52,6 +52,8 @@ require '../generalFiles/dbAccess.php';
   $Stmt = $db->prepare('
     SELECT r.title
     FROM db.recipe r 
+    JOIN db.ingredient I
+      USING (r.id)
     
     
     WHERE id= :id');
