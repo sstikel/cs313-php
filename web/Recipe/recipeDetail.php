@@ -51,14 +51,13 @@ require '../generalFiles/dbAccess.php';
     JOIN db.ingredient i 
       ON r.id = i.recipe_id
     JOIN db.measurement m
-      ON i.measurement_id = m.id
-    WHERE id= :id');
+      ON i.measurement_id = m.id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $Stmt->execute();
   $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
      
   //Title
-  echo '<h1>' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
+  echo '<h1>Title:' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
 
   //ingredients - bulleted - qty - measurement
   //foreach ($recipe["ingredient"] as $ingr)
