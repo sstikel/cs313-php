@@ -38,7 +38,9 @@ require '../generalFiles/dbAccess.php';
   <?php
 
 /////////TODO - add in db calls for qty and measurement///////////////
-//, m.measurement
+//, i.ingredient, i.qty, m.measurement
+//JOIN db.ingredient i 
+      //ON r.id = i.recipe_id
 //JOIN db.measurement m
 //ON i.measurement_id = m.id
 
@@ -48,10 +50,9 @@ require '../generalFiles/dbAccess.php';
   $db = getDb();
   //Original - $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');, r.instructions 
   $Stmt = $db->prepare('
-    SELECT r.title, i.ingredient, i.qty
+    SELECT r.title
     FROM db.recipe r 
-    JOIN db.ingredient i 
-      ON r.id = i.recipe_id
+    
     
     WHERE id= :id');
   $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
