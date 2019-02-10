@@ -11,7 +11,60 @@ require '../generalFiles/dbAccess.php';
 
 
 
+//verify login info
+function login(){
+    //compare credentials
+    $username = $_GET["username"];
+    $db = getDb();
+    $Stmt = $db->prepare('SELECT * FROM db.author WHERE username= :username');
+    $Stmt->bindParam(':username', $username, PDO::PARAM_INT);
+    $Stmt->execute();
+    $author = $Stmt->fetch(PDO::FETCH_ASSOC);
 
+
+    //Pass - login
+    foreach ($author as $a) {
+        if ($a["username"] ==$_GET["username"] && $a["pswrd"] ==$_GET["pswrd"]) {
+            $_SESSION["login"] = true;
+            header('Location: /recipe/recipeHome.php');
+        }
+    }
+
+    //False - redirect to login page
+    echo "<script type='text/javascript'>alert('User not found. Please log in agaian.');</script>";
+    header('Location: /recipe/recipeLogin.php');
+}
+
+//register new user
+function register(){
+   /* $id = $_GET[""];
+    $db = getDb();
+    $Stmt = $db->prepare('INSERT INTO (name, username, pswrd) db.author VALUES ($_GET["name"], $_GET["username"], $_GET["pswrd"]) WHERE');
+    $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $Stmt->execute();
+    $author = $Stmt->fetch(PDO::FETCH_ASSOC); */
+    //then login...
+}
+
+//logout
+function logout(){
+    session_unset();
+    session_destroy();
+    $_SESSION["login"] = false;
+    header('Location: /recipe/recipeHome.php');
+}
+
+if (isset($_GET["logout"])) {
+    logout();
+}
+else if (isset($_GET["register"])){
+    register();
+}
+else if (isset($_GET["login"])){
+    login();
+}
+else
+    break;
 
 
 ?>
@@ -39,9 +92,9 @@ require '../generalFiles/dbAccess.php';
     <div id="divReturnForm" hidden>
         <form action="" method="post">
             <!--Username-->
-            Username: <input type="text" id="loginUsername"><br>
+            Username: <input type="text" name="username"><br>
             <!--password-->
-            Password: : <input type="text" id="loginPassword"><br>
+            Password: : <input type="text" name="pswrd"><br>
             <input type="submit">
         </form>
     </div>
@@ -52,7 +105,7 @@ require '../generalFiles/dbAccess.php';
             Name: : <input type="text"><br>
             Username: : <input type="text"><br>
             Password: : <input type="text"><br>
-            Confirm Password: : <input type="text"><br>
+           <!-- Confirm Password: : <input type="text"><br> -->
             <input type="submit">
         </form>
     </div>
@@ -61,10 +114,6 @@ require '../generalFiles/dbAccess.php';
 </html>
 
 <?php
-    //verify login info
-
-
-    //register new user
-    
+   
 
 ?>
