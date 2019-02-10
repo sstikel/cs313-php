@@ -8,6 +8,7 @@
                notes (if signed in user that has made notes about given recipe)
 *****************************************/
 
+session_start();
 require '../generalFiles/dbAccess.php';
 ?>
 
@@ -26,6 +27,9 @@ require '../generalFiles/dbAccess.php';
   <h1>Recipe Details</h1>
 
   <!--Sign in button-->
+  <?php
+    require '../generalFiles/loginBtn.php';
+  ?>
 
   
 

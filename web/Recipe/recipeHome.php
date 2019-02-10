@@ -7,6 +7,8 @@
  * sign in
  * 
  *******************************/ 
+
+  session_start();
   require '../generalFiles/dbAccess.php';
 
 ?>
@@ -26,7 +28,10 @@
   <h1>Recipe Home</h1>
 
   <!--Sign in button-->
-
+  <?php
+    require '../generalFiles/loginBtn.php';
+  ?>
+  
   <hr>
   <br>
 </header>
