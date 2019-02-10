@@ -29,9 +29,9 @@
 
   <!--Sign in button-->
   <?php
-    require '../generalFiles/loginBtn.php';
+    //require '../generalFiles/loginBtn.php';
   ?>
-  
+
   <hr>
   <br>
 </header>
