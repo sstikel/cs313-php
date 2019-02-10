@@ -28,7 +28,7 @@ require '../generalFiles/dbAccess.php';
 
   <!--Sign in button-->
   <?php
-    require '../generalFiles/loginBtn.php';
+    //require '../generalFiles/loginBtn.php';
   ?>
 
   
