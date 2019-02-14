@@ -42,7 +42,7 @@
   $Stmt = $db->prepare($query);
   $Stmt->bindParam(':id', $measurement_id, PDO::PARAM_INT);
   $Stmt->execute();
-  $measurement = $Stmt->fetch(PDO::FETCH_ASSOC);
+  $measurement = $Stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
   //author table
@@ -78,12 +78,8 @@
 </header>
 
 <body>
-    <!--Display recipe-->
   <?php
-
-/////////TODO - add in db calls for qty and measurement///////////////
-//, i.ingredient, i.qty, m.measurement
-
+  //Display Recipe
   //Title
   echo "<h1>Title: $title</h1><br>";
 
@@ -92,8 +88,8 @@
   foreach ($ingredients as $ingredient_item) {
     $ingredient = $ingredient_item['ingredient'];
     $qty = $ingredient_item['qty'];
-    //$measurement = ???
-    echo "<li>$qty measurement - $ingredient</li>";
+    $measure = $ingredient_item[$measurement['measurement_id']];
+    echo "<li>$qty $measure - $ingredient</li>";
   }
   echo "</ul>";
 
