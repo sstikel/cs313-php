@@ -87,6 +87,7 @@
     $qty = $ingredient_item['qty'];
     $measurement_id = $ingredient_item['measurement_id'];
     $measurement = $measurements[$measurement_id];
+    var_dump($measurement);
     echo "<li>$qty $measurement - $ingredient</li>";
   }
   echo "</ul>";
