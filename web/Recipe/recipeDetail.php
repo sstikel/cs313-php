@@ -28,14 +28,12 @@
 
   //ingredient table
   //id, ingredient, qty, measurement_id, recipe_id
-  $query = 'SELECT * FROM db.ingredient WHERE recipe_id= :id';
+  $query = 'SELECT id, ingredient, qty, measurement_id FROM db.ingredient WHERE recipe_id= :id';
   $Stmt = $db->prepare($query);
   $Stmt->bindParam(':id', $recipe_id, PDO::PARAM_INT);
   $Stmt->execute();
   $ingredients = $Stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $ingredient = $ingredients['ingredient'];
-  $qty = $ingredients['qty'];
   $measurement_id = $ingredients['measurement_id'];
 
   //measurement table
@@ -90,7 +88,14 @@
   echo "<h1>Title: $title</h1><br><br>";
 
   //ingredients - bulleted - qty - measurement
- 
+  echo "<ul>"; //TODO - May want to format in a <table>
+  foreach ($ingredients as $ingredient_item) {
+    $ingredient = $ingredient_item['ingredient'];
+    $qty = $ingredient_item['qty'];
+    //$measurement = ???
+    echo "<li>$qty measurement - $ingredient</li>";
+  }
+  echo "</ul>";
 
   //instructions
   echo "</div><br><p><h4>Instructions:</h4><br>$instructions</p><br>";
