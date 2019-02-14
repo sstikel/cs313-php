@@ -34,15 +34,12 @@
   $Stmt->execute();
   $ingredients = $Stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $measurement_id = $ingredients['measurement_id'];
-
   //measurement table
   //id, measurement
-  $query = 'SELECT id, measurement FROM db.measurement WHERE id= :id';
+  $query = 'SELECT id, measurement FROM db.measurement';
   $Stmt = $db->prepare($query);
-  $Stmt->bindParam(':id', $measurement_id, PDO::PARAM_INT);
   $Stmt->execute();
-  $measurement = $Stmt->fetchAll(PDO::FETCH_ASSOC);
+  $measurements = $Stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
   //author table
@@ -88,8 +85,8 @@
   foreach ($ingredients as $ingredient_item) {
     $ingredient = $ingredient_item['ingredient'];
     $qty = $ingredient_item['qty'];
-    $measure = $measurement[$ingredient_item['measurement_id']];
-    echo "<li>$qty $measure - $ingredient</li>";
+    $measurement = $measurements[$ingredient_item['measurement_id']];
+    echo "<li>$qty $measurement - $ingredient</li>";
   }
   echo "</ul>";
 
