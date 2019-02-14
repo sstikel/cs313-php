@@ -36,9 +36,6 @@
   <h1>Recipe Home</h1>
 
   <!--Sign in button-->
-  <?php
-    //require ('../generalFiles/loginBtn.php');
-  ?>
 
   <hr>
   <br>
@@ -63,10 +60,9 @@
     
   ?>
   <ul>
-
+  <br>
 </body>
 <footer>
-  <br>
   <hr>
   <a href="../Wk02Home.php">Sam's Homepage</a>
 </footer>

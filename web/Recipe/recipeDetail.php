@@ -8,8 +8,55 @@
                notes (if signed in user that has made notes about given recipe)
 *****************************************/
 
-session_start();
-require '../generalFiles/dbAccess.php';
+  session_start();
+  require_once ('../generalFiles/dbAccess.php');
+  $db = getDb();
+
+  $recipe_id = htmlspecialchars($_GET["id"]);
+  
+  //recipe table
+  //id, title, author_id, instructions
+  $query = 'SELECT id, title, author_id, instructions FROM db.recipe WHERE id= :id';
+  $Stmt = $db->prepare($query);
+  $Stmt->bindParam(':id', $recipe_id, PDO::PARAM_INT);
+  $Stmt->execute();
+  $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
+  
+  $title = $recipe['title'];
+  $author_id = $recipe['author_id'];
+  $instructions = $recipe['instructions'];
+
+  //ingredient table
+  //id, ingredient, qty, measurement_id, recipe_id
+  $query = 'SELECT * FROM db.ingredient WHERE recipe_id= :id';
+  $Stmt = $db->prepare($query);
+  $Stmt->bindParam(':id', $recipe_id, PDO::PARAM_INT);
+  $Stmt->execute();
+  $ingredients = $Stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $ingredient = $ingredients['ingredient'];
+  $qty = $ingredients['qty'];
+  $measurement_id = $ingredients['measurement_id'];
+
+  //measurement table
+  //id, measurement
+  $query = 'SELECT id, measurement FROM db.measurement WHERE id= :id';
+  $Stmt = $db->prepare($query);
+  $Stmt->bindParam(':id', $measurement_id, PDO::PARAM_INT);
+  $Stmt->execute();
+  $measurement = $Stmt->fetch(PDO::FETCH_ASSOC);
+
+
+  //author table
+  //id, name, username, pswrd
+  $query = 'SELECT id, username FROM db.author WHERE id= :id';
+  $Stmt = $db->prepare($query);
+  $Stmt->bindParam(':id', $author_id, PDO::PARAM_INT);
+  $Stmt->execute();
+  $author = $Stmt->fetch(PDO::FETCH_ASSOC);
+
+ 
+
 ?>
 
 <!DOCTYPE html>
@@ -27,12 +74,7 @@ require '../generalFiles/dbAccess.php';
   <h1>Recipe Details</h1>
 
   <!--Sign in button-->
-  <?php
-    //require '../generalFiles/loginBtn.php';
-  ?>
-
   
-
   <hr>
   <br>
 </header>
@@ -43,64 +85,25 @@ require '../generalFiles/dbAccess.php';
 
 /////////TODO - add in db calls for qty and measurement///////////////
 //, i.ingredient, i.qty, m.measurement
-//JOIN db.ingredient i 
-      //ON r.id = i.recipe_id
-//JOIN db.measurement m
-//ON i.measurement_id = m.id
-
-//////TODO - Search 'like' what is typed in
-
-  $id = $_GET["id"];
-  $db = getDb();
-  //Original - 
-  $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE id= :id');
-  //call recipe data
-  //Original - $Stmt = $db->prepare('SELECT (title, instructions, author) FROM db.recipe WHERE id= :id');
-  $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
-  $Stmt->execute();
-  $recipe = $Stmt->fetch(PDO::FETCH_ASSOC);
-  
-  //call ingredient data
-  /*$Stmt = $db->prepare('
-    SELECT ingredient, qty, measurement_id 
-    FROM db.ingredient     
-    WHERE recipe_id = :id');
-  $Stmt->bindParam(':id', $id, PDO::PARAM_INT);
-  $Stmt->execute();
-  $ingredient = $Stmt->fetch(PDO::FETCH_ASSOC);
-  */
-
-  //call measurement data
-  /*$Stmt = $db->prepare('
-    SELECT measurement 
-    FROM db.measurement     
-    WHERE id = :id');
-  $Stmt->bindParam(':id', $ingredient["measurement_id"], PDO::PARAM_INT);
-  $Stmt->execute();
-  $ingredient = $Stmt->fetch(PDO::FETCH_ASSOC);
-    */
 
   //Title
-  echo '<h1>Title: ' . $recipe["title"] . '</h1><br><br><div class="dIngr"><ul>';
+  echo "<h1>Title: $title</h1><br><br>";
 
   //ingredients - bulleted - qty - measurement
-  //foreach ($recipe["ingredient"] as $ingr)
-  //echo '<li>' . $ingr["qty"] . ' ' . $ingr["measurement"] . ' - ' . $ingr["ingredient"] . '<li>'
-  
-  //test join...
-  //var_dump($recipe);
+ 
 
   //instructions
-  echo '</ul></div><br><p>Instructions:<br>' . $recipe["instructions"] . '</p><br>';
+  echo "</div><br><p><h4>Instructions:</h4><br>$instructions</p><br>";
 
   //TODO - notes from user
 
 
   //TODO - button - create user note
   ?>
+
+  <br>
 </body>
 <footer>
-  <br>
   <hr>
   <a href="../Wk02Home.php">Sam's Homepage</a>
 </footer>
