@@ -12,8 +12,7 @@
   require_once ('../generalFiles/dbAccess.php');
   $db = getDb();
 
-  $query = 'SELECT id, title, author_id, instructions FROM db.recipe WHERE title=:title';
-  $statement->bindParam(':title', $_GET["title"], PDO::PARAM_STR);
+  $query = 'SELECT id, title, author_id, instructions FROM db.recipe;
   $statement = $db->prepare($query);
   $statement->execute();
   $recipes = $statement->fetchAll(PDO::FETCH_ASSOC);
