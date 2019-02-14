@@ -12,7 +12,7 @@
   require_once ('../generalFiles/dbAccess.php');
   $db = getDb();
 
-  $query = 'SELECT id, title, author_id, instructions FROM db.recipe;
+  $query = 'SELECT id, title, author_id, instructions FROM db.recipe';
   $statement = $db->prepare($query);
   $statement->execute();
   $recipes = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -37,7 +37,7 @@
 
   <!--Sign in button-->
   <?php
-    //require '../generalFiles/loginBtn.php';
+    //require ('../generalFiles/loginBtn.php');
   ?>
 
   <hr>
