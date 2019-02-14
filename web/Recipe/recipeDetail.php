@@ -85,10 +85,10 @@
 //, i.ingredient, i.qty, m.measurement
 
   //Title
-  echo "<h1>Title: $title</h1><br><br>";
+  echo "<h1>Title: $title</h1><br>";
 
   //ingredients - bulleted - qty - measurement
-  echo "<ul>"; //TODO - May want to format in a <table>
+  echo "<h4>Ingredients</h4><ul>"; //TODO - May want to format in a <table>
   foreach ($ingredients as $ingredient_item) {
     $ingredient = $ingredient_item['ingredient'];
     $qty = $ingredient_item['qty'];
