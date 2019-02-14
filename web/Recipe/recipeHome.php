@@ -46,11 +46,12 @@
 </header>
 <body>
   <!--Search Recipes-->
+  <!--
   <form action="recipeDetail.php" method="get">
     Recipe Search: <input type="text" name="title">
-    <input type="submit">  
+    <input type="submit" value="Search Recipes">  
   </form>
-
+-->
   <!--List recipes-->
   <ul>
   <?php
