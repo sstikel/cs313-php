@@ -88,7 +88,7 @@
   foreach ($ingredients as $ingredient_item) {
     $ingredient = $ingredient_item['ingredient'];
     $qty = $ingredient_item['qty'];
-    $measure = $ingredient_item[$measurement['measurement_id']];
+    $measure = $measurement[$ingredient_item['measurement_id']];
     echo "<li>$qty $measure - $ingredient</li>";
   }
   echo "</ul>";
