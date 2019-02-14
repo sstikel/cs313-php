@@ -9,8 +9,17 @@
  *******************************/ 
 
   session_start();
-  require '../generalFiles/dbAccess.php';
+  require_once ('../generalFiles/dbAccess.php');
+  $db = getDb();
 
+  $query = 'SELECT id, title, author_id, instructions FROM db.recipe WHERE title=:title';
+  $statement->bindParam(':title', $_GET["title"], PDO::PARAM_STR);
+  $statement = $db->prepare($query);
+  $statement->execute();
+  $recipes = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+  
+    
 ?>
 
 <!DOCTYPE html>
@@ -45,21 +54,13 @@
   <!--List recipes-->
   <ul>
   <?php
-    
-    $db = getDb();
-    if (isset($_GET["title"])) {
-        $Stmt = $db->prepare('SELECT * FROM db.recipe WHERE title=:title');
-        $Stmt->bindParam(':title', $_GET["title"], PDO::PARAM_STR);
-    } else {
-        $Stmt = $db->prepare('SELECT * FROM db.recipe');
-    }
-    $Stmt->execute();
-    $recipes = $Stmt->fetchAll(PDO::FETCH_ASSOC);
-    $titles = array();
     foreach ($recipes as $recipe) {
-        array_push($titles, $recipe["title"]);
-        echo '<li><a href="recipeDetail.php?id=' . $recipe["id"] . '">' . $recipe["title"] . '</a><li><br>';
+      $title = $recipe['title'];
+      $id = $recipe['id'];
+
+      echo "<li><a href='recipeDetail.php?id=$id'>$title</a><li><br>";
     }
+    
   ?>
   <ul>
 
