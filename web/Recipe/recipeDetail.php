@@ -87,7 +87,7 @@
   foreach ($ingredients as $ingredient_item) {
     $ingredient = $ingredient_item['ingredient'];
     $qty = $ingredient_item['qty'];
-    $measurement = $measurements['id'];//TODO FIRST - it is printing an array to screen
+    $measurement = $measurements["$ingredient_item['id']"];//TODO FIRST - it is printing an array to screen
     var_dump($measurement);
     echo "<li>$qty $measurement - $ingredient</li>";
   }
