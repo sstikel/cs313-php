@@ -36,7 +36,7 @@
 
   //measurement table
   //id, measurement
-  $query = 'SELECT id, measurement FROM db.measurement';
+  $query = 'SELECT measurement FROM db.measurement';
   $Stmt = $db->prepare($query);
   $Stmt->execute();
   $measurements = $Stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -81,7 +81,8 @@
   echo "<h1>Title: $title</h1><br>";
 
   //ingredients - bulleted - qty - measurement
-  echo "<h4>Ingredients</h4><ul>"; //TODO - May want to format in a <table>
+  echo "<h4>Ingredients</h4>";
+  echo "<ul><div id='dIngredients'>"; //TODO - May want to format in a <table>
   foreach ($ingredients as $ingredient_item) {
     $ingredient = $ingredient_item['ingredient'];
     $qty = $ingredient_item['qty'];
@@ -89,10 +90,11 @@
     var_dump($measurement);
     echo "<li>$qty $measurement - $ingredient</li>";
   }
-  echo "</ul>";
+  echo "</div></ul><br>";
 
   //instructions
-  echo "</div><br><p><h4>Instructions:</h4><br>$instructions</p><br>";
+  echo "<p><h4>Instructions:</h4>";
+  echo "<br>$instructions</p><br>";
 
   //TODO - notes from user
 
