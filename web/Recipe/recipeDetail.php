@@ -89,6 +89,7 @@
     $qty = $ingredient_item['qty'];
     $m_id = $ingredient_item['measurement_id'];
     $measurement = $measurements["$m_id"];//TODO FIRST - it is printing an array to screen
+    var_dump($measurements);
     var_dump($measurement);
     echo "<li>$qty $measurement - $ingredient</li>";
   }
