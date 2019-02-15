@@ -39,9 +39,8 @@
   $query = 'SELECT id, measurement FROM db.measurement';
   $Stmt = $db->prepare($query);
   $Stmt->execute();
-  $m = $Stmt->fetchAll(PDO::FETCH_ASSOC);
-  $measurements = array($m[0]=>$m[1], $m[3]=>$m[4], $m[5]=>$m[6], $m[7]=>$m[8], $m[9]=>$m[10],
-  $m[11]=>$m[12], $m[13]=>$m[14], $m[15]=>$m[16], $m[17]=>$m[18], $m[19]=>$m[20]);
+  $measurements = $Stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
   //author table
   //id, name, username, pswrd
@@ -88,10 +87,8 @@
     $ingredient = $ingredient_item['ingredient'];
     $qty = $ingredient_item['qty'];
     $m_id = $ingredient_item['measurement_id'];
-    $measurement = $measurements["$m_id"];//TODO FIRST - it is printing an array to screen
-    var_dump($measurements);
-    var_dump($measurement);
-    echo "<li>$qty $measurement - $ingredient</li>";
+   
+    echo "<li>$qty measurement $m_id - $ingredient</li>";
   }
   echo "</div></ul><br>";
 
