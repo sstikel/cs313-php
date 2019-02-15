@@ -36,11 +36,12 @@
 
   //measurement table
   //id, measurement
-  $query = 'SELECT measurement FROM db.measurement';
+  $query = 'SELECT id, measurement FROM db.measurement';
   $Stmt = $db->prepare($query);
   $Stmt->execute();
-  $measurements = $Stmt->fetchAll(PDO::FETCH_ASSOC);
-
+  $m = $Stmt->fetchAll(PDO::FETCH_ASSOC);
+  $measurements = array($m[0]=>$m[1], $m[3]=>$m[4], $m[5]=>$m[6], $m[7]=>$m[8], $m[9]=>$m[10],
+  $m[11]=>$m[12], $m[13]=>$m[14], $m[15]=>$m[16], $m[17]=>$m[18], $m[19]=>$m[20]);
 
   //author table
   //id, name, username, pswrd
