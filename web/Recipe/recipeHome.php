@@ -82,7 +82,7 @@
       "<option value='5'>Pint</option>",
       "<option value='6'>Quart</option>",
       "<option value='7'>Gallon</option>",
-      "<option value='8'>Ounce (mass></option>",
+      "<option value='8'>Ounce (mass)</option>",
       "<option value='9'>Pound</option>",
       "<option value='10'>Qty</option>");
 
