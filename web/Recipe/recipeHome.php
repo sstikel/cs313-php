@@ -90,11 +90,11 @@
       for ($i=0; $i<=3;$i++) {
         echo '<tr><td><input type="text" name="ingredient"></td>';
         echo '<td><input type="number" name="qty"></td>';
-        echo '<td></td><select name="measurement_id">';
+        echo '<td><select name="measurement_id">';
         foreach ($measurement_select as $m) {
           echo $m;
         }
-        echo '</tr>';
+        echo '</td></tr>';
       }
       
 
