@@ -75,7 +75,7 @@
       <tr><th>Ingredients:</th><th>Quantity</th><th>Measurment</th></tr>
       <?php
       $measurement_select = array(
-      "<option value='' disabled selected>Choose...</option>"
+      "<option value='' disabled selected>Choose...</option>",
       "<option value='1'>Teaspoon</option>",
       "<option value='2'>Tablespoon</option>",
       "<option value='3'>Cup</option>",
