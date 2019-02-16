@@ -17,7 +17,11 @@
   $statement->execute();
   $recipes = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-  
+  $query = 'SELECT id, measurement FROM db.measurement';
+  $statement = $db->prepare($query);
+  $statement->execute();
+  $measurements = $statement->fetchAll(PDO::FETCH_ASSOC);
+
     
 ?>
 
@@ -60,6 +64,45 @@
     
   ?>
   <ul>
+  <br>
+
+  <!--Insert recipe - form-->
+  <div class="userSignedIn" id="dfAdd">
+  <form action="recipeAdd.php" method="post">
+    Title: <input type="text" name="title">
+    <input type="hidden" name ="author" value=""><br> <!--use php to insert user info-->
+    <table>
+      <tr><th>Ingredients:</th><th>Quantity</th><th>Measurment</th></tr>
+      <?php
+      $measurement_select = array(
+      "<option value='1'>Teaspoon</option>",
+      "<option value='2'>Tablespoon</option>",
+      "<option value='3'>Cup</option>",
+      "<option value='4'>Ounce (fl)</option>",
+      "<option value='5'>Pint</option>",
+      "<option value='6'>Quart</option>",
+      "<option value='7'>Gallon</option>",
+      "<option value='8'>Ounce (mass></option>",
+      "<option value='9'>Pound</option>",
+      "<option value='10'>Qty</option>");
+
+      for ($i=0; $i<=3;$i++) {
+        echo '<tr><td><input type="text" name="ingredient"></td>';
+        echo '<td><input type="number" name="qty"></td>';
+        echo '<td></td><select name="measurement_id">';
+        foreach ($measurement_select as $m) {
+          echo $m;
+        }
+        echo '</tr>';
+      }
+      
+
+    
+      
+      ?>
+  </form>
+  </div>
+
   <br>
 </body>
 <footer>
