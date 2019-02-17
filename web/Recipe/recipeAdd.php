@@ -23,20 +23,21 @@
   }
 
   require_once ('../generalFiles/dbAccess.php');
-  //$db = getDb();
+  $db = getDb();
 
   //insert data
   //measurement
   //ingredients
   //author
+  $author_id = "00 Buck"
   
   //recipe
-  // $query = 'INSERT INTO  db.recipe(title, author_id, instructions) VALUES()';
-  // $statement = $db->prepare($query);
-  // $statement->bindValue(':title', $title, PDO::PARAM_STR);
-  // $statement->bindValue(':author_id', $author_id, PDO::PARAM_STR);
-  // $statement->bindValue(':instructions', $instructions, PDO::PARAM_STR);
-  // $statement->execute();
+  $query = 'INSERT INTO  db.recipe(title, author_id, instructions) VALUES(:title, :author_id, :instructions)';
+  $statement = $db->prepare($query);
+  $statement->bindValue(':title', $title, PDO::PARAM_STR);
+  $statement->bindValue(':author_id', $author_id, PDO::PARAM_STR);
+  $statement->bindValue(':instructions', $instructions, PDO::PARAM_STR);
+  $statement->execute();
 
 
 
