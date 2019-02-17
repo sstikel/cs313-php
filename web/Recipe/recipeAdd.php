@@ -9,6 +9,7 @@
 
   $title = htmlspecialchars($_POST['title']);
   $author = htmlspecialchars($_POST['author']);
+  $instructions = htmlspecialchars($_POST["instructions"])
   $aPost = htmlspecialchars($_POST);
   //loop $ingredient_$count
   $count = 0;
@@ -24,17 +25,26 @@
   $db = getDb();
 
   //insert data
-  $query = 'SELECT id, title, author_id, instructions FROM db.recipe';
+  //measurement
+  //ingredients
+  //author
+  
+  //recipe
+  $query = 'INSERT INTO  db.recipe(title, author_id, instructions) VALUES()';
   $statement = $db->prepare($query);
+  $statement->bindValue(':title', $title, PDO::PARAM_STR);
+  $statement->bindValue(':author_id', $author_id, PDO::PARAM_STR);
+  $statement->bindValue(':instructions', $instructions, PDO::PARAM_STR);
   $statement->execute();
-  $recipes = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 
 
   //get id to redirect page
-  $query = 'SELECT id, title, author_id, instructions FROM db.recipe';
+  $query = 'SELECT id, title, author_id FROM db.recipe WHERE title = :title'; // . ' and author = ' . $author; //make more specific current recipe
   $statement = $db->prepare($query);
+  $Stmt->bindParam(':title', $title, PDO::PARAM_INT);
   $statement->execute();
   $recipes = $statement->fetchAll(PDO::FETCH_ASSOC);
   $id = $recipe["id"];

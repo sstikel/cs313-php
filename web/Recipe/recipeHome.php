@@ -108,6 +108,7 @@
       ?>
       
     </table>
+    Instructions: <textarea name="instructions"></textarea>
     <input type="submit" value="Share Recipe">
   </form>
   </div>
