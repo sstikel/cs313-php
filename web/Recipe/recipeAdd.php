@@ -22,8 +22,8 @@
   //   //echo "<script>alert('for each worked')</script>"
   // }
 
-  require_once ('../generalFiles/dbAccess.php');
-  $db = getDb();
+  //require_once ('../generalFiles/dbAccess.php');
+  //$db = getDb();
 
   //insert data
   //measurement
