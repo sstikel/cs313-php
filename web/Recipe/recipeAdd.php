@@ -9,7 +9,7 @@
 
   $title = htmlspecialchars($_POST['title']);
   $author = htmlspecialchars($_POST['author']);
-  $instructions = htmlspecialchars($_POST["instructions"])
+  $instructions = htmlspecialchars($_POST["instructions"]);
   
   //loop $ingredient_$count
   
@@ -22,7 +22,7 @@
   //   //echo "<script>alert('for each worked')</script>"
   // }
 
-  //require_once ('../generalFiles/dbAccess.php');
+  require_once ('../generalFiles/dbAccess.php');
   //$db = getDb();
 
   //insert data
