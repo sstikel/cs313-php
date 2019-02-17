@@ -91,9 +91,11 @@
       for ($i=0; $i<=3;$i++) {
         $count += 1;
         $name_i = "ingredient_$count";
+        $qty_i = "qty_$count";
+        $measurement_id_i = "measurement_id_$count";
         echo "<tr><td><input type='text' name=$name_i></td>";
-        echo '<td><input type="number" name="qty"></td>';
-        echo '<td><select name="measurement_id">';
+        echo "<td><input type='number' name=$qty_i></td>";
+        echo "<td><select name=$measurement_id_i>";
         foreach ($measurement_select as $m) {
           echo $m;
         }
