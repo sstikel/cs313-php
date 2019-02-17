@@ -87,8 +87,11 @@
       "<option value='9'>Pound</option>",
       "<option value='10'>Qty</option>");
 
+      $count = 0;
       for ($i=0; $i<=3;$i++) {
-        echo '<tr><td><input type="text" name="ingredient"></td>';
+        $count += 1;
+        $name_i = "ingredient_$count";
+        echo "<tr><td><input type='text' name=$name_i></td>";
         echo '<td><input type="number" name="qty"></td>';
         echo '<td><select name="measurement_id">';
         foreach ($measurement_select as $m) {
@@ -96,13 +99,16 @@
         }
         echo '</td></tr>';
       }
-      
+      //TODO - IDEA - enclose this in a function 
+      //do...while(count<3)
+      //easier to call when I need more ingredient rows
 
     
       
       ?>
-      <input type="submit">
+      
     </table>
+    <input type="submit" value="Share Recipe">
   </form>
   </div>
 
