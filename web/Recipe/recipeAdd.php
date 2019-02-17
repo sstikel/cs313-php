@@ -12,8 +12,9 @@
   $instructions = htmlspecialchars($_POST["instructions"])
   
   //loop $ingredient_$count
-  $count = 0;
+  
   foreach ($_POST as $post) {
+    $count = 0;
     $count += 1;
     if (array_key_exists("ingredient_$count", $post)) {
       $ingredient_$count = htmlspecialchars($post["ingredient_$count"]);
