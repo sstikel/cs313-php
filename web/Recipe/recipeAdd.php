@@ -51,6 +51,6 @@
 
 
   flush();
- // header("Location:recipeDetail.php?$id");//TODO - edit id...
+  header("Location:recipeDetail.php?1"//$id");//TODO - edit id...
   die();
 ?>
