@@ -13,14 +13,14 @@
   
   //loop $ingredient_$count
   
-  foreach ($_POST as $post) {
-    $count = 0;
-    $count += 1;
-    if (array_key_exists("ingredient_$count", $post)) {
-      $ingredient_$count = htmlspecialchars($post["ingredient_$count"]);
-    }
-    //echo "<script>alert('for each worked')</script>"
-  }
+  // foreach ($_POST as $post) {
+  //   $count = 0;
+  //   $count += 1;
+  //   if (array_key_exists("ingredient_$count", $post)) {
+  //     $ingredient_$count = htmlspecialchars($post["ingredient_$count"]);
+  //   }
+  //   //echo "<script>alert('for each worked')</script>"
+  // }
 
   require_once ('../generalFiles/dbAccess.php');
   $db = getDb();
