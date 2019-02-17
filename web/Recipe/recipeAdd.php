@@ -17,7 +17,7 @@
     $count = 0;
     $count += 1;
     if (array_key_exists("ingredient_$count", $post)) {
-      $ingredient_$count = htmlspecialchars($post["ingredient_$count"]);
+      $ingredient_ . $count = htmlspecialchars($post["ingredient_" . $count]);
     }
     //echo "<script>alert('for each worked')</script>"
   }
