@@ -29,7 +29,7 @@
   //measurement
   //ingredients
   //author
-  $author_id = "00 Buck"
+  $author_id = "00 Buck";
   
   //recipe
   $query = 'INSERT INTO  db.recipe(title, author_id, instructions) VALUES(:title, :author_id, :instructions)';
