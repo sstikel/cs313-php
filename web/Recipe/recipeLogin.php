@@ -30,8 +30,9 @@
     Username:<br><input type="text" name="username"><br>
     Password:<br><input type="password" name="pswrd"><br>
     <input type="submit" value="login">
-
-
   </form>
+  <br>
+  <a href="recipeNewUser.php">Create User</a>
+
 </body>
 </html>
