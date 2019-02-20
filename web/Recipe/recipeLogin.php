@@ -24,12 +24,12 @@
 </head>
 <body>
   <!--error handling - front/backend-->
-  <!--error message-->
+  <!--error message - recipeLoginVerify returns fail=true-->
 
-  <form action="" method="post">
+  <form action="recipeLoginVerify.php" method="post">
     Username:<br><input type="text" name="username"><br>
     Password:<br><input type="text" name="pswrd"><br>
-    <input type="submit">
+    <input type="submit" value="login">
 
 
   </form>
