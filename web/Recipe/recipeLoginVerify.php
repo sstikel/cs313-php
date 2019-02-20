@@ -18,7 +18,7 @@ $query = $db->query("SELECT username, pswrd, name, id FROM db.author
 
 foreach ($query as $q) {
   if (password_verify($pswrd, $q)) {
-    //set session variable
+    //set session variables
     $_SESSION['name'] = $q['name'];
     $_SESSION['user_id'] = $q['id'];
     header('Location: /recipe/recipeHome.php')

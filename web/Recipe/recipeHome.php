@@ -40,6 +40,7 @@
   <h1>Recipe Home</h1>
 
   <!--Sign in button-->
+  <a href="recipeLogin.php">Login</a>
 
   <hr>
   <br>
