@@ -1,13 +1,18 @@
 <?php
-/*************************************************
- * Doc: recipeLogin.php
+/***
+ * Doc: recipeNewUser.php
  * Author: Sam Gay
  * Date: 2/20/19
- * Purpose: login user to site
- * 
- *************************************************/
+ * Purpose: Create new user based on user input and store to db
+ */
 
  session_start();
+
+ require_once ('../generalFiles/dbAccess.php');
+ $db = getDb();
+
+
+
 
 ?>
 
@@ -20,18 +25,15 @@
   <link rel="icon" type="image/gif/png" href="../generalImg/sicon.png">
   <link rel="stylesheet" type="text/css" href="../generalFiles/generalSS.css">
   <script type="text/javascript" src="../generalFiles/generalJS.js"></script>
-  <title>Recipe Login</title>
+  <title>Recipe Create User</title>
 </head>
 <body>
-  <!--error handling - front/backend-->
-  <!--error message - recipeLoginVerify returns fail=true-->
-
-  <form action="recipeLoginVerify.php" method="post">
-    Username:<br><input type="text" name="username"><br>
-    Password:<br><input type="password" name="pswrd"><br>
-    <input type="submit" value="login">
-
-
+  <form action="" method="post">
+    Name:<br><input type="text" name="name">
+    Username:<br><input type="text" name="username">
+    Password:<br><input type="password" name="pswrd">
+    <br>
+    <input type="submit" value="Create User">
   </form>
 </body>
 </html>
