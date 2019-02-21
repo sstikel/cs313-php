@@ -22,10 +22,10 @@
   <title>Recipe Create User</title>
 </head>
 <body>
-  <form action="" method="post">
+  <form action="recipeCreateUser.php" method="post">
     Name:<br><input type="text" name="name"><br>
     Username:<br><input type="text" name="username"><br>
-    Password:<br><input type="password" name="pswrd"><br>
+    Password:<br><input type="password" name="pswrd"><br><br>
     <input type="submit" value="Create User">
   </form>
 </body>
