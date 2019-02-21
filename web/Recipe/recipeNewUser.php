@@ -3,16 +3,10 @@
  * Doc: recipeNewUser.php
  * Author: Sam Gay
  * Date: 2/20/19
- * Purpose: Create new user based on user input and store to db
+ * Purpose: Collect new user data based on user input and send to be stored
  */
 
  session_start();
-
- require_once ('../generalFiles/dbAccess.php');
- $db = getDb();
-
-
-
 
 ?>
 
@@ -29,10 +23,9 @@
 </head>
 <body>
   <form action="" method="post">
-    Name:<br><input type="text" name="name">
-    Username:<br><input type="text" name="username">
-    Password:<br><input type="password" name="pswrd">
-    <br>
+    Name:<br><input type="text" name="name"><br>
+    Username:<br><input type="text" name="username"><br>
+    Password:<br><input type="password" name="pswrd"><br>
     <input type="submit" value="Create User">
   </form>
 </body>
