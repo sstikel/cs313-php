@@ -12,13 +12,13 @@ session_start();
 require_once ('../generalFiles/dbAccess.php');
 $db = getDb();
 
-$name = htmlspecialchars($_POST['name']);
+$dname = htmlspecialchars($_POST['name']);
 $username = htmlspecialchars($_POST['username']);
 $pswrd = password_hash($_POST['pswrd'], PASSWORD_DEFAULT);
 
-$query = 'INSERT INTO db.author (name, username, pswrd) VALUES (:name, :username, :pswrd);';
+$query = 'INSERT INTO db.author (name, username, pswrd) VALUES (:dname, :username, :pswrd)';
 $statement = $db->prepare($query);
-$statement->bindValue(':name', $name);
+$statement->bindValue(':dname', $dname);
 $statement->bindValue(':username', $username);
 $statement->bindValue(':pswrd', $pswrd);
 $statement->execute();
