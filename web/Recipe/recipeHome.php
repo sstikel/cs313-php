@@ -22,6 +22,10 @@
   $statement->execute();
   $measurements = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+  if (isset($_SESSION)) {
+    $user_id = $_SESSION['id'];
+    $user_name = $_SESSION['name'];
+  }
     
 ?>
 
@@ -41,8 +45,8 @@
 
   <!--Sign in button-->
   <?php  
-    if (isset($_SESSION['user_id'])) {
-      echo "Welcome $_SESSION['name']. <a href='recipeLogout.php'>Logout</a>";
+    if (isset($user_name)) {
+      echo "Welcome $user_name . <a href='recipeLogout.php'>Logout</a>";
     }
     else {
       echo "<a href='recipeLogin.php'>Login</a>";
@@ -66,9 +70,9 @@
   <?php
     foreach ($recipes as $recipe) {
       $title = $recipe['title'];
-      $id = $recipe['id'];
+      $recipe_id = $recipe['id'];
 
-      echo "<li><a href='recipeDetail.php?id=$id'>$title</a><li><br>";
+      echo "<li><a href='recipeDetail.php?id=$recipe_id'>$title</a><li><br>";
     }
     
   ?>
@@ -112,10 +116,7 @@
       }
       //TODO - IDEA - enclose this in a function 
       //do...while(count<3)
-      //easier to call when I need more ingredient rows
-
-    
-      
+      //easier to call when I need more ingredient rows     
       ?>
       
     </table>
@@ -125,9 +126,9 @@
   </div>
 
   <br>
+  <hr>
 </body>
 <footer>
-  <hr>
   <a href="../Wk02Home.php">Sam's Homepage</a>
 </footer>
 </html>

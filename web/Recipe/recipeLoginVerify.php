@@ -25,8 +25,7 @@ try {
       $_SESSION['user_id'] = $q['id'];
       header('Location: recipeHome.php');
       die();
-    }
-         
+    }   
   }
   header('Location: recipeLogin.php?fail=true');
   die();
