@@ -19,7 +19,7 @@ try {
 
 
  // foreach ($query as $q) {
-   foreach ($db->query("SELECT username, pswrd, name, id FROM db.author WHERE username ='".$username."'") as $q)
+   foreach ($db->query("SELECT username, pswrd, name, id FROM db.author WHERE username ='".$username."'") as $q) {
     if (password_verify($pswrd, $q['pswrd'])) {
       //set session variables
       $_SESSION['name'] = $q['name'];
