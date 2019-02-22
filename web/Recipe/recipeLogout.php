@@ -6,7 +6,7 @@
 *Purpose: log user out
 ****************************************/
 
-start_session();
+session_start();
 
 session_unset();
 session_destroy();
