@@ -14,10 +14,12 @@ $db = getDb();
 try {
   $username = $_POST['username'];
   $pswrd = $_POST['pswrd'];
-  $query = $db->query("SELECT username, pswrd, name, id FROM db.author");
+
+  //$query = $db->query("SELECT username, pswrd, name, id FROM db.author");
 
 
-  foreach ($query as $q) {
+ // foreach ($query as $q) {
+   foreach ($db->query("SELECT username, pswrd, name, id FROM db.author WHERE username ='".$username."'") as $q)
     if (password_verify($pswrd, $q['pswrd'])) {
       //set session variables
       $_SESSION['name'] = $q['name'];
