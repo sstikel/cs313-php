@@ -22,6 +22,7 @@
   <title>Recipe Create User</title>
 </head>
 <body>
+  <h2>Please enter you new user information</h2><br>
   <form action="recipeCreateUser.php" method="post">
     Name:<br><input type="text" name="name"><br>
     Username:<br><input type="text" name="username"><br>
