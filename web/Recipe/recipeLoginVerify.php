@@ -30,6 +30,7 @@ try {
 }
 catch (Exception $e) {
   echo "error... $e";
+  die();
 
 }
 ?>
