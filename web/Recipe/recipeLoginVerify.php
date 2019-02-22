@@ -11,12 +11,12 @@ session_start();
 require_once ('../generalFiles/dbAccess.php');
 $db = getDb();
 
-$username = $_POST['username'];
-$pswrd = $_POST['pswrd'];
-$query = $db->query("SELECT username, pswrd, name, id FROM db.author 
-          WHERE username = $username");
-
 try {
+  $username = $_POST['username'];
+  $pswrd = $_POST['pswrd'];
+  $query = $db->query("SELECT username, pswrd, name, id FROM db.author");
+
+
   foreach ($query as $q) {
     if (password_verify($pswrd, $q)) {
       //set session variables
