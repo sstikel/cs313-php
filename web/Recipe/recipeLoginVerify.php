@@ -11,10 +11,10 @@ start_session();
 require_once ('../generalFiles/dbAccess.php');
 $db = getDb();
 
-$user = $_POST['username'];
+$username = $_POST['username'];
 $pswrd = $_POST['pswrd'];
 $query = $db->query("SELECT username, pswrd, name, id FROM db.author 
-          WHERE username = '" . $user . "'");
+          WHERE username = $username");
 
 try {
   foreach ($query as $q) {
