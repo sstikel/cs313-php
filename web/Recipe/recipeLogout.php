@@ -8,7 +8,9 @@
 
 start_session();
 
+session_unset();
 session_destroy();
-header('Location: /recipe/recipeHome.php');
+header('Location: recipeHome.php');
+die();
 
 ?>
