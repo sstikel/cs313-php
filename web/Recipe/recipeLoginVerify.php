@@ -26,10 +26,10 @@ try {
       header('Location: recipeHome.php');
       die();
     }
-    else
-      header('Location: recipeLogin.php?fail=true');
-      die();
+         
   }
+  header('Location: recipeLogin.php?fail=true');
+  die();
 }
 catch (Exception $e) {
   echo "error... $e";
