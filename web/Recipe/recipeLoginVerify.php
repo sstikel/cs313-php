@@ -12,18 +12,19 @@ require_once ('../generalFiles/dbAccess.php');
 $db = getDb();
 
 try {
-  $username = $_POST['username'];
+  $username = htmlspecialchars($_POST['username']);
   $pswrd = $_POST['pswrd'];
 
-  $query = $db->query("SELECT username, pswrd, name, id FROM db.authorWHERE username ='".$username."'");
+  //$query = $db->query("SELECT username, pswrd, name, id FROM db.authorWHERE username ='".$username."'");
 
 
-  foreach ($query as $q) {
+  //foreach ($query as $q) {
+    foreach ($db->query("SELECT username, pswrd, name, id FROM db.authorWHERE username ='".$username."'") as $q) {
     if (password_verify($pswrd, $q['pswrd'])) {
       //set session variables
       $_SESSION['name'] = $q['name'];
       $_SESSION['user_id'] = $q['id'];
-      header('Location: /recipe/recipeHome.php');
+      header('Location: /recipeHome.php');
       die();
     }
     else
