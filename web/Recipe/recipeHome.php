@@ -40,7 +40,15 @@
   <h1>Recipe Home</h1>
 
   <!--Sign in button-->
-  <a href="recipeLogin.php">Login</a>
+  <?php  
+    if (isset($_SESSION['user_id'])) {
+      echo "Welcome $_SESSION['name']. <a href='recipeLogout.php'>Logout</a>";
+    }
+    else {
+      echo "<a href="recipeLogin.php">Login</a>";
+    }
+  ?>
+  
 
   <hr>
   <br>
