@@ -6,7 +6,7 @@
    * Purpose: insert new recipe into db
    * 
    ******************************************/
-
+  session_start();
   require_once ('../generalFiles/dbAccess.php');
   $db = getDb();
 
