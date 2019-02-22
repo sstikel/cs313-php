@@ -7,12 +7,15 @@
    * 
    ******************************************/
 
+  require_once ('../generalFiles/dbAccess.php');
+  $db = getDb();
+
+  $author_id = ($_SESSION['user_id']);
+
   $title = htmlspecialchars($_POST['title']);
-  $author = htmlspecialchars($_POST['author']);
   $instructions = htmlspecialchars($_POST["instructions"]);
   
   //loop $ingredient_$count
-  
   foreach ($_POST as $post) {
     $count = 0;
     $count += 1;
@@ -24,8 +27,7 @@
     //TODO - Fix this......
   }
 
-  require_once ('../generalFiles/dbAccess.php');
-  $db = getDb();
+  
 
   //insert data
   //measurement
@@ -39,8 +41,6 @@
   // $statement->execute();
   
   
-  //author
-  $author_id = "00 Buck"; //TODO - Have session remember author_id and populate from that...
   
   //recipe
   $query = 'INSERT INTO  db.recipe(title, author_id, instructions) VALUES(:title, :author_id, :instructions)';

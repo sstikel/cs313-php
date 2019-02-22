@@ -83,7 +83,6 @@
   <div class="userSignedIn" id="dfAdd">
   <form action="recipeAdd.php" method="post">
     Title: <input type="text" name="title">
-    <?php echo "<input type='hidden' name ='author' value='$user_id'><br>"; ?>
     <table>
       <tr><th>Ingredients:</th><th>Quantity</th><th>Measurment</th></tr>
       <?php
