@@ -18,7 +18,7 @@ try {
 
 
   foreach ($query as $q) {
-    if (password_verify($pswrd, $q)) {
+    if (password_verify($pswrd, $q['pswrd'])) {
       //set session variables
       $_SESSION['name'] = $q['name'];
       $_SESSION['user_id'] = $q['id'];
