@@ -14,7 +14,7 @@ $db = getDb();
 $user = $_POST['username'];
 $pswrd = $_POST['pswrd'];
 $query = $db->query("SELECT username, pswrd, name, id FROM db.author 
-          WHERE username = '" . $user . "'")
+          WHERE username = '" . $user . "'");
 
 try {
   foreach ($query as $q) {
