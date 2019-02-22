@@ -28,9 +28,10 @@
     $post_qty = $_POST['qty_' . $count];
     $post_measure_id = $_POST['measurement_id_' . $count];
 
-    array_push($ingredients, $count => $post_ingredient);
-    array_push($qty, $count => $post_qty);
-    array_push($measurement_id, $count => $post_measurement_id);
+    //add to arrays
+    $ingredients[$count] = $post_ingredient;
+    $qty[$count] = $post_qty;
+    $measurement_id[$count] = $post_measurement_id;
   }
   
 
