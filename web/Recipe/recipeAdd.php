@@ -15,17 +15,23 @@
   $title = htmlspecialchars($_POST['title']);
   $instructions = htmlspecialchars($_POST["instructions"]);
   
+  $ingredients = array();
+  $qty = array();
+  $measurement_id = array();
+
+
+  $count = 0;
   //loop $ingredient_$count
   foreach ($_POST as $post) {
-    $count = 0;
     $count += 1;
-    // if ()) {
-    //   $ingredient_ . $count = htmlspecialchars($post["ingredient_" . $count]);
-    // $qty . $count = htmlspecialchars($post["qty" . $count]);
-    // $measurement_id_ . $count = htmlspecialchars($post["measurement_id_" . $count]);
-     }
-    //TODO - Fix this......
+    $post_ingredient = htmlspecialchars($_POST['ingredient_' . $count]);
+    $post_qty = $_POST['qty_' . $count];
+    $post_measure_id = $_POST['measurement_id_' . $count];
 
+    array_push($ingredients, $count => $post_ingredient);
+    array_push($qty, $count => $post_qty);
+    array_push($measurement_id, $count => $post_measurement_id);
+  }
   
 
   //insert data

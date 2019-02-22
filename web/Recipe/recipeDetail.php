@@ -70,6 +70,8 @@
 
   <!--Sign in button-->
   
+  <a href="recipeHome.php">Recipe Home</a>
+  
   <hr>
   <br>
 </header>
