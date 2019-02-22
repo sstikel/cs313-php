@@ -60,3 +60,15 @@ CREATE TABLE db.note (
   author_id int REFERENCES db.author (id),   --author of the note
   content varchar(500) NOT NULL
 );
+
+
+SELECT COLUMN_NAME, DATA_TYPE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE 
+    TABLE_SCHEMA = 'db' AND
+     TABLE_NAME = 'author' AND 
+     COLUMN_NAME = 'pswrd';
+
+ALTER TABLE db.author ALTER COLUMN pswrd TYPE VARCHAR(255);
+
+UPDATE db.author SET pswrd = 'hello';

@@ -12,8 +12,8 @@ session_start();
 require_once ('../generalFiles/dbAccess.php');
 $db = getDb();
 
-$dname = $_POST['name'];
-$username = $_POST['username'];
+$dname = htmlspecialchars($_POST['name']);
+$username = htmlspecialchars($_POST['username']);
 $pswrd = password_hash($_POST['pswrd'], PASSWORD_DEFAULT);
 
 try {
@@ -31,5 +31,8 @@ catch (Exception $e) {
 
 header('Location: recipeHome.php');
 die();
+
+
+
 
 ?>
