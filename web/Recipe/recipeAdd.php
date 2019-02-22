@@ -10,7 +10,7 @@
   require_once ('../generalFiles/dbAccess.php');
   $db = getDb();
 
-  $author_id = ($_SESSION['user_id']);
+  $author_id = $_SESSION['user_id'];
 
   $title = htmlspecialchars($_POST['title']);
   $instructions = htmlspecialchars($_POST["instructions"]);
