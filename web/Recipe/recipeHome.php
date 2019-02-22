@@ -45,7 +45,7 @@
       echo "Welcome $_SESSION['name']. <a href='recipeLogout.php'>Logout</a>";
     }
     else {
-      echo "<a href="recipeLogin.php">Login</a>";
+      echo "<a href='recipeLogin.php'>Login</a>";
     }
   ?>
   
