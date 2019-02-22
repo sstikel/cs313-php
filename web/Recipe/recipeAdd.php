@@ -25,7 +25,6 @@
     // $measurement_id_ . $count = htmlspecialchars($post["measurement_id_" . $count]);
      }
     //TODO - Fix this......
-  }
 
   
 
