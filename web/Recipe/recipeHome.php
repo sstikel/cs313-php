@@ -46,7 +46,7 @@
   <!--Sign in button-->
   <?php  
     if (isset($user_name)) {
-      echo "Welcome $user_name . <a href='recipeLogout.php'>Logout</a>";
+      echo "Welcome $user_name. <a href='recipeLogout.php'>Logout</a>";
     }
     else {
       echo "<a href='recipeLogin.php'>Login</a>";
@@ -83,7 +83,7 @@
   <div class="userSignedIn" id="dfAdd">
   <form action="recipeAdd.php" method="post">
     Title: <input type="text" name="title">
-    <input type="hidden" name ="author" value=""><br> <!--use php to insert user info-->
+    <input type="hidden" name ="author" value="<?php $user_id ?>"><br> <!--use php to insert user info-->
     <table>
       <tr><th>Ingredients:</th><th>Quantity</th><th>Measurment</th></tr>
       <?php
