@@ -22,7 +22,7 @@ try {
       //set session variables
       $_SESSION['name'] = $q['name'];
       $_SESSION['user_id'] = $q['id'];
-      header('Location: /recipe/recipeHome.php')
+      header('Location: /recipe/recipeHome.php');
     }
     else
       header('Location: /recipe/recipeLogin.php?fail=true');
