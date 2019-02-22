@@ -28,8 +28,8 @@
   <!--error handling - front/backend-->
   <!--error message - recipeLoginVerify returns fail=true-->
  <?php  
-    if($_GET['fail']==true) {
-      echo '<p>The username and password inputted do not match. Please try again.</p>'
+    if ($_GET['fail'] == true) {
+      echo '<p>The username and password inputted do not match. Please try again.</p>';
     }
   ?>
   <form action="recipeLoginVerify.php" method="post">
