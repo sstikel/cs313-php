@@ -9,6 +9,8 @@
 
  session_start();
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,11 @@
 <body>
   <!--error handling - front/backend-->
   <!--error message - recipeLoginVerify returns fail=true-->
-
+ <?php  
+    if($_GET['fail']==true) {
+      echo '<p>The username and password inputted do not match. Please try again.</p>'
+    }
+  ?>
   <form action="recipeLoginVerify.php" method="post">
     Username:<br><input type="text" name="username"><br>
     Password:<br><input type="password" name="pswrd"><br>
