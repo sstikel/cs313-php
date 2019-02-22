@@ -6,7 +6,7 @@
  * Purpose: verify submitted username and password
  */
 
-start_session();
+session_start();
 
 require_once ('../generalFiles/dbAccess.php');
 $db = getDb();
