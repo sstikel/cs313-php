@@ -45,6 +45,14 @@
   $statement->bindValue(':instructions', $instructions, PDO::PARAM_STR);
   $statement->execute();
 
+  //query recipe_id
+  $query = 'SELECT id FROM db.recipe WHERE title=:title AND author_id=:author_id';
+  $statement = $db->prepare($query);
+  $statement->bindValue(':author_id', $author_id], PDO::PARAM_STR);
+  $statement->bindValue(':title', $title, PDO::PARAM_STR);
+  $statement->execute();
+  $recipe_id = $statement->fetch(PDO::FETCH_ASSOC);
+
   //ingredients
   
   for($i=1; $i<=$count; $i++) {

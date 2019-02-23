@@ -31,7 +31,7 @@
     }
   ?>
   <form action="recipeLoginVerify.php" method="post">
-    Username:<br><input type="text" name="username"><br>
+    Username:<br><input type="text" name="username" autofocus><br>
     Password:<br><input type="password" name="pswrd"><br>
     <input type="submit" value="login">
   </form>
