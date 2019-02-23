@@ -36,15 +36,17 @@
   
 
   //insert data
-  //measurement
+
   //ingredients
-  // $query = 'INSERT INTO  db.ingredient(ingredient, qty, measurement_id, recipe_id) VALUES(:ingredient, :qty, :measurement_id, :recipe_id)';
-  // $statement = $db->prepare($query);
-  // $statement->bindValue(':ingredient', $ingredient, PDO::PARAM_STR);
-  // $statement->bindValue(':measurement_id', $measurement_id, PDO::PARAM_STR);
-  // $statement->bindValue(':recipe_id', $recipe_id, PDO::PARAM_STR);
-  // $statement->bindValue(':qty', $qty, PDO::PARAM_STR);
-  // $statement->execute();
+  $query = 'INSERT INTO  db.ingredient(ingredient, qty, measurement_id, recipe_id) VALUES(:ingredient, :qty, :measurement_id, :recipe_id)';
+  for(i=1; i<$count; i++) {
+    $statement = $db->prepare($query);
+    $statement->bindValue(':ingredient', $ingredient, PDO::PARAM_STR);
+    $statement->bindValue(':measurement_id', $measurement_id, PDO::PARAM_STR);
+    $statement->bindValue(':recipe_id', $recipe_id, PDO::PARAM_STR);
+    $statement->bindValue(':qty', $qty, PDO::PARAM_STR);
+  }
+  $statement->execute();
   
   
   
