@@ -72,7 +72,8 @@
       $title = $recipe['title'];
       $recipe_id = $recipe['id'];
 
-      echo "<li><a href='recipeDetail.php?id=$recipe_id'>$title</a><li><br>";
+      echo "<li><a href='recipeDetail.php?id=$recipe_id'>$title</a><li>";
+      echo "<br>";
     }
     
   ?>
