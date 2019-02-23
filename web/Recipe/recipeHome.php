@@ -107,11 +107,11 @@
           $measurement_id_i = "measurement_id_$count";
           echo "<tr><td><input type='text' name=$name_i></td>";
           echo "<td><input type='number' name=$qty_i></td>";
-          echo "<td><select name=$measurement_id_i></td>";
+          echo "<td><select name=$measurement_id_i>";
           foreach ($measurement_select as $m) {
             echo $m;
           }
-          echo '</tr>';
+          echo '</td></tr>';
         }
         //TODO - IDEA - enclose this in a function 
         //do...while(count<3)
