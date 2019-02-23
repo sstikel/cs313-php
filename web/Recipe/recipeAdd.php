@@ -37,19 +37,6 @@
 
   //insert data
 
-  //ingredients
-  $query = 'INSERT INTO  db.ingredient(ingredient, qty, measurement_id, recipe_id) VALUES(:ingredient, :qty, :measurement_id, :recipe_id)';
-  for(i=1; i<$count; i++) {
-    $statement = $db->prepare($query);
-    $statement->bindValue(':ingredient', $ingredient, PDO::PARAM_STR);
-    $statement->bindValue(':measurement_id', $measurement_id, PDO::PARAM_STR);
-    $statement->bindValue(':recipe_id', $recipe_id, PDO::PARAM_STR);
-    $statement->bindValue(':qty', $qty, PDO::PARAM_STR);
-  }
-  $statement->execute();
-  
-  
-  
   //recipe
   $query = 'INSERT INTO  db.recipe(title, author_id, instructions) VALUES(:title, :author_id, :instructions)';
   $statement = $db->prepare($query);
@@ -58,20 +45,19 @@
   $statement->bindValue(':instructions', $instructions, PDO::PARAM_STR);
   $statement->execute();
 
-
-
-
-
-  //get id to redirect page
-  // $query = 'SELECT id, title, author_id FROM db.recipe WHERE title = :title'; // . ' and author = ' . $author; //make more specific current recipe
-  // $statement = $db->prepare($query);
-  // $Stmt->bindParam(':title', $title, PDO::PARAM_INT);
-  // $statement->execute();
-  // $recipes = $statement->fetchAll(PDO::FETCH_ASSOC);
-  // $id = $recipe["id"];
-
+  //ingredients
+  
+  for(i=1; i<$count; i++) {
+    $query = 'INSERT INTO  db.ingredient(ingredient, qty, measurement_id, recipe_id) VALUES(:ingredient, :qty, :measurement_id, :recipe_id)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':ingredient', $ingredient[i], PDO::PARAM_STR);
+    $statement->bindValue(':measurement_id', $measurement_id[i], PDO::PARAM_STR);
+    $statement->bindValue(':recipe_id', $recipe_id, PDO::PARAM_STR);
+    $statement->bindValue(':qty', $qty[i], PDO::PARAM_STR);
+    $statement->execute();
+  }
 
   flush();
-  header("Location:recipeDetail.php?id=1");//$id");//TODO - edit id...
+  header("Location:recipeDetail.php?id=$recipe_id");//$id");//TODO - edit id...
   die();
 ?>
