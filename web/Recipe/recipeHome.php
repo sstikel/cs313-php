@@ -83,9 +83,9 @@
   <!--Insert recipe - form-->
   <div class="userSignedIn" id="dfAdd">
     <form action="recipeAdd.php" method="post">
-      Title: <input type="text" name="title">
+      <strong>Title:</strong> <input type="text" name="title">
       <table>
-        <tr><th>Ingredients:</th><th>Quantity</th><th>Measurment</th></tr>
+        <tr><th>Ingredient</th><th>Quantity</th><th>Measurment</th></tr>
         <?php
         $measurement_select = array(
           "<option value='' disabled selected>Choose...</option>",
