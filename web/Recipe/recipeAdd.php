@@ -23,15 +23,20 @@
   $count = 0;
   //loop $ingredient_$count
   foreach ($_POST as $post) {
-    $count += 1;
-    $post_ingredient = htmlspecialchars($_POST['ingredient_' . $count]);
-    $post_qty = $_POST['qty_' . $count];
-    $post_measure_id = $_POST['measurement_id_' . $count];
+    if ($post['title'] || $post['instructions']) {
+      break;
+    }
+    else {
+      $count += 1;
+      $post_ingredient = htmlspecialchars($_POST['ingredient_' . $count]);
+      $post_qty = $_POST['qty_' . $count];
+      $post_measure_id = $_POST['measurement_id_' . $count];
 
-    //add to arrays
-    $ingredients[$count] = $post_ingredient;
-    $qty[$count] = $post_qty;
-    $measurement_id[$count] = $post_measurement_id;
+      //add to arrays
+      $ingredients[$count] = $post_ingredient;
+      $qty[$count] = $post_qty;
+      $measurement_id[$count] = $post_measurement_id;
+    }
   }
   
 
