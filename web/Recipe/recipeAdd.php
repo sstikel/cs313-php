@@ -15,9 +15,9 @@
   $title = htmlspecialchars($_POST['title']);
   $instructions = htmlspecialchars($_POST["instructions"]);
   
-  $ingredients = array();
-  $qty = array();
-  $measurement_id = array();
+  $ingredients[0] = 0;
+  $qty[0] = 0;
+  $measurement_id[0] = 0;
 
 
   $count = 0;
@@ -66,6 +66,6 @@
   }
 
   flush();
-  header("Location:recipeDetail.php?id=$recipe_id");//$id");//TODO - edit id...
+  header("Location:recipeDetail.php?id=$recipe_id");
   die();
 ?>
