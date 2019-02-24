@@ -75,6 +75,7 @@
   $statement->bindValue(':title', $title, PDO::PARAM_STR);
   $statement->execute();
   $recipe_id = $statement->fetch(PDO::FETCH_ASSOC);
+  $recipe_id = $recipe_id['id'];
 
   //ingredients
   
