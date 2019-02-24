@@ -26,9 +26,9 @@
     if ($post['title'] || $post['instructions']) {
       
     }
-    if ($post['ingredient']) {}
-    if ($post['qty']) {}
-    if ($post['measure_id']) {}
+    // if ($post['ingredient']) {}
+    // if ($post['qty']) {}
+    // if ($post['measure_id']) {}
     else {
       $count += 1;
       $post_ingredient = htmlspecialchars($_POST['ingredient_' . $count]);
