@@ -122,7 +122,7 @@
     $statement->execute();
 
   flush();
-  //header("Location:recipeDetail.php?id=$recipe_id");
-  header("Location:recipeHome.php");
+  header("Location:recipeDetail.php?id=$recipe_id");
+  // header("Location:recipeHome.php");
   die();
 ?>
