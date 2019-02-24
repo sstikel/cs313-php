@@ -24,8 +24,11 @@
   //loop $ingredient_$count
   foreach ($_POST as $post) {
     if ($post['title'] || $post['instructions']) {
-      break;
+      
     }
+    if ($post['ingredient']) {}
+    if ($post['qty']) {}
+    if ($post['measure_id']) {}
     else {
       $count += 1;
       $post_ingredient = htmlspecialchars($_POST['ingredient_' . $count]);
@@ -71,6 +74,7 @@
   }
 
   flush();
-  header("Location:recipeDetail.php?id=$recipe_id");
+  //header("Location:recipeDetail.php?id=$recipe_id");
+  header("Location:recipeHome.php");
   die();
 ?>
